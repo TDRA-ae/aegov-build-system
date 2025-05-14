@@ -10,12 +10,11 @@
         <ul class="space-y-6 xl:w-7/12">
           <li>
             <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">standard dropdown</h3>
-              @@include('components/dropdown/dropdown-standard.html', {
+              @@include('components/dropdown/dropdown.html', {
                   "buttonId": "2",
                   "dropdownId": "baseDropdownMenu",
                   "buttonClass": "",
                   "buttonLabel": "Open Dropdown",
-                  "placement": "right",
                   "items": [
                     { "label": "An item", "href": "#" },
                     { "label": "An item", "href": "#" },
@@ -113,7 +112,6 @@
                   "label": "Alerts",
                   "description": "Get notified when there is a critical issue.",
                   "checked": "true",
-                  "disabled": "false",
                   "additional-class": "rounded-md hover:bg-aeblack-50 px-5 pt-4 pb-2"
                 })
               
@@ -124,7 +122,6 @@
                   "label": "Promotions",
                   "description": "Get notified when there is an offer.",
                   "checked": "false",
-                  "disabled": "false",
                   "additional-class": "rounded-md hover:bg-aeblack-50 px-5 pt-4 pb-2"
                 })
               
@@ -135,7 +132,6 @@
                   "label": "Upgrades",
                   "description": "Get notified about critical upgrades to the system.",
                   "checked": "false",
-                  "disabled": "false",
                   "additional-class": "rounded-md hover:bg-aeblack-50 px-5 pt-4 pb-2"
                 })
               </div>

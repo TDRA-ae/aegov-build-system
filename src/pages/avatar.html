@@ -9,24 +9,77 @@
       <h2 class="mb-8">Avatar component</h2>
         <ul class="space-y-6 xl:w-7/12">
           <li>
-            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6"></h3>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Avatar Standard</h3>
               @@include('components/avatar/avatar.html', {
                 "src": "/images/AbdullahBinDamithan-002.jpg",
                 "alt": "John Doe",
                 "type":"rounded",
-                "size": "avatar-xl"
+
               })
           </li>
           <li>
-            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6"></h3>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Avatar Rounded</h3>
             @@include('components/avatar/avatar-indicator.html', {
               "src": "/images/AbdullahBinDamithan-002.jpg",
               "alt": "John Doe",
-              "size": "avatar-xl",
-              "type":"rounded",
               "indicator-color-class" : "bg-aegreen-500"
             })
+            @@include('components/avatar/avatar-indicator.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "type":"rounded",
+              "indicator-color-class" : "bg-aered-500"
+            })
         </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Avatar Size</h3>
+          <div class="flex flex-wrap gap-4">
+            @@include('components/avatar/avatar.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "size": "avatar-xs"
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "size": "avatar-sm"
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "size": "avatar-lg"
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "size": "avatar-xl"
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "size": "avatar-2xl"
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "size": "avatar-3xl"
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "",
+              "alt": "John Doe",
+            })
+            @@include('components/avatar/avatar.html', {
+              "src": "",
+              "alt": "John Doe",
+              "type":"rounded"
+            })
+            
+          </div>
+      </li>
       </ul>
     </div>
 <script src="./js/script.js"></script>    

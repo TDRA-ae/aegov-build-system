@@ -10,7 +10,7 @@
         <ul class="space-y-6 xl:w-7/12">
           <li>
             <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Steps standarrd</h3>
-            @@include('./components/steps/steps-standard.html', {
+            @@include('./components/steps/steps.html', {
               "steps": [
                 { "status": "completed", "number": 1, "href": "#" },
                 { "status": "completed", "number": 2, "href": "#" },
@@ -20,7 +20,7 @@
             })
           </li>
           <li>
-            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Multi select</h3>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Text below</h3>
             @@include('./components/steps/steps-text-below.html', {
               "steps": [
                 { "status": "completed", "number": 1, "href": "#", "text": "Step 1" },
@@ -43,8 +43,8 @@
       </li>
       <li>
         <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Steps size</h3>
-        @@include('./components/steps/steps-standard.html', {
-          "stepSize":"step-sm",
+        @@include('./components/steps/steps.html', {
+          "size":"step-sm",
           "additional-class":"mb-8",
           "steps": [
             { "status": "completed", "number": 1, "href": "#" },
@@ -53,8 +53,8 @@
             { "status": "upcoming", "number": 4, "href": "#" }
           ]
         })
-        @@include('./components/steps/steps-standard.html', {
-          "stepSize":"step-base",
+        @@include('./components/steps/steps.html', {
+          "size":"step-base",
           "additional-class":"mb-8",
           "steps": [
             { "status": "completed", "number": 1, "href": "#" },
@@ -63,8 +63,8 @@
             { "status": "upcoming", "number": 4, "href": "#" }
           ]
         })
-        @@include('./components/steps/steps-standard.html', {
-          "stepSize":"step-lg",
+        @@include('./components/steps/steps.html', {
+          "size":"step-lg",
           "additional-class":"mb-8",
           "steps": [
             { "status": "completed", "number": 1, "href": "#" },

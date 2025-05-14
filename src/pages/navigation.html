@@ -15,55 +15,55 @@
 					<div class="menu-main-menu-container">
 						<ul class="menu nav-menu lg:flex lg:items-center lg:gap-1 xl:gap-2">
 							@@include('./components/navigation/nav-link-item.html', {
-                "href": "/",
-                "label": "Home",
-                "active": true,
-                "hasIcon": true,
-                "iconSVG": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" viewBox=\"0 0 256 256\"><path d=\"M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z\"></path></svg>"
-            })
-            
-            @@include('./components/navigation/nav-link-item.html', {
-                "href": "/services",
-                "label": "Our services",
-                "active": false,
-                "hasIcon": false
-            })
-            
-            @@include('./components/navigation/nav-link-item.html', {
-                "href": "/about",
-                "label": "About us",
-                "active": false,
-                "hasIcon": false
-            })
+								"href": "/",
+								"label": "Home",
+								"active": true,
+								"hasIcon": true,
+								"iconSVG": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" viewBox=\"0 0 256 256\"><path d=\"M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z\"></path></svg>"
+							})
+							
+							@@include('./components/navigation/nav-link-item.html', {
+								"href": "/services",
+								"label": "Our services",
+								"active": false,
+								"hasIcon": false
+							})
+							
+							@@include('./components/navigation/nav-link-item.html', {
+								"href": "/about",
+								"label": "About us",
+								"active": false,
+								"hasIcon": false
+							})
 						</ul>
 					</div>
 				</nav>
 				<div class="header-navs-right">
 					<ul class="flex items-center">
 						@@include('./components/navigation/nav-right-icon.html', {
-              "href": "#",
-              "tooltipTarget": "tooltip-login",
-              "svgIcon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><circle cx="128" cy="96" r="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,216c19.37-33.47,54.55-56,96-56s76.63,22.53,96,56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
-              "label": "Login",
-              "tooltipLabel": "Login"
-            })
+							"href": "#",
+							"tooltipTarget": "tooltip-login",
+							"svgIcon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><circle cx="128" cy="96" r="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M32,216c19.37-33.47,54.55-56,96-56s76.63,22.53,96,56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+							"label": "Login",
+							"tooltipLabel": "Login"
+						})
 						@@include('./components/navigation/nav-right-icon.html', {
-              "href": "#",
-              "tooltipPlacement": "bottom",
-              "tooltipTarget": "tooltip-accessibility",
-              "svgIcon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\"><rect width=\"256\" height=\"256\" fill=\"none\"/><circle cx=\"128\" cy=\"40\" r=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><path d=\"M39,102.9C27.31,97.5,31.15,80,44,80H212c12.87,0,16.71,17.5,5,22.9L160,128l22.87,86.93a12,12,0,0,1-21.75,10.14L128,168,94.88,225.07a12,12,0,0,1-21.75-10.14L96,128Z\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/></svg>",
-              "label": "Accessibility",
-              "tooltipLabel": "Accessibility"
-            })
-            
-            @@include('./components/navigation/nav-right-icon.html', {
-                "href": "#",
-                "tooltipPlacement": "bottom",
-                "tooltipTarget": "tooltip-Switch-language",
-                "svgIcon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\"><rect width=\"256\" height=\"256\" fill=\"none\"/><circle cx=\"128\" cy=\"128\" r=\"96\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><path d=\"M88,128c0,37.46,13.33,70.92,34.28,93.49a7.77,7.77,0,0,0,11.44,0C154.67,198.92,168,165.46,168,128s-13.33-70.92-34.28-93.49a7.77,7.77,0,0,0-11.44,0C101.33,57.08,88,90.54,88,128Z\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><line x1=\"37.46\" y1=\"96\" x2=\"218.54\" y2=\"96\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><line x1=\"37.46\" y1=\"160\" x2=\"218.54\" y2=\"160\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/></svg>",
-                "label": "Switch language",
-                "tooltipLabel": "Switch language"
-            })
+							"href": "#",
+							"tooltipPlacement": "bottom",
+							"tooltipTarget": "tooltip-accessibility",
+							"svgIcon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\"><rect width=\"256\" height=\"256\" fill=\"none\"/><circle cx=\"128\" cy=\"40\" r=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><path d=\"M39,102.9C27.31,97.5,31.15,80,44,80H212c12.87,0,16.71,17.5,5,22.9L160,128l22.87,86.93a12,12,0,0,1-21.75,10.14L128,168,94.88,225.07a12,12,0,0,1-21.75-10.14L96,128Z\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/></svg>",
+							"label": "Accessibility",
+							"tooltipLabel": "Accessibility"
+						})
+						
+						@@include('./components/navigation/nav-right-icon.html', {
+							"href": "#",
+							"tooltipPlacement": "bottom",
+							"tooltipTarget": "tooltip-Switch-language",
+							"svgIcon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\"><rect width=\"256\" height=\"256\" fill=\"none\"/><circle cx=\"128\" cy=\"128\" r=\"96\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><path d=\"M88,128c0,37.46,13.33,70.92,34.28,93.49a7.77,7.77,0,0,0,11.44,0C154.67,198.92,168,165.46,168,128s-13.33-70.92-34.28-93.49a7.77,7.77,0,0,0-11.44,0C101.33,57.08,88,90.54,88,128Z\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><line x1=\"37.46\" y1=\"96\" x2=\"218.54\" y2=\"96\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/><line x1=\"37.46\" y1=\"160\" x2=\"218.54\" y2=\"160\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"16\"/></svg>",
+							"label": "Switch language",
+							"tooltipLabel": "Switch language"
+						})
 					</ul>
 				</div>
 			</div>
@@ -130,9 +130,10 @@
 									<span>Nav Link</span>
 								</a>
 							</li>
-							<li class="menu-item">
-								<a href="#">Nav Link 2</a>
-							</li>
+							@@include('./components/navigation/nav-link-item.html', {
+								"href": "/services",
+								"label": "Our services",
+							})
 							<li class="menu-item active-page">
 								<a href="#">Nav Link 3</a>
 							</li>

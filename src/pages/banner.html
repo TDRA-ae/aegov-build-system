@@ -9,6 +9,14 @@
       <h2 class="mb-8">Banner component</h2>
         <ul class="space-y-6">
           <li>
+            @@include('components/banner/banner.html', {
+              "message": "Upgrading your account to be used with UAE Pass is now active.",
+              "bannerPosition": "banner-top",
+              "linkText":"Connect your account to UAE PASS",
+              "linkUrl": "#"
+            })
+        </li>
+          <li>
               @@include('components/banner/banner-dark-camel.html', {
                 "message": "Upgrading your account to be used with UAE Pass is now active.",
                 "bannerPosition": "banner-top",

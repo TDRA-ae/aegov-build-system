@@ -1,5 +1,8 @@
-<div class="aegov-avatar @@if(context.size){@@size} @@additional-class @@if (context.type && context.type == 'rounded') {avatar-rounded}" role="img">
+<div class="aegov-avatar @@if(context.size){@@size} @@additional-class @@if (context.type === 'rounded') {avatar-rounded}" role="img">
+  @@if (context.src) {
     <img src="@@src" alt="@@alt">
-  </div>
-
-  
+  }
+  @@if (!context.src) {
+    <img class="no-user" src="" alt="Image Not Found">
+  }
+</div>
