@@ -1,0 +1,79 @@
+<div class="flex items-center justify-center">
+    <div class="aegov-pagination flex flex-1 justify-between items-center sm:hidden">
+      <a class="aegov-pagination-previous" href="@@previousUrl" @@if(!previousUrl){aria-disabled="true"}>
+        <svg aria-hidden="true" class="rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none" />
+          <polyline points="160 208 80 128 160 48" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+        </svg>
+        <span>Previous</span>
+      </a>
+      <span class="pages">Page @@currentPage of @@totalPages</span>
+      <a class="aegov-pagination-next" href="@@nextUrl" @@if(!nextUrl){aria-disabled="true"}>
+        <span>Next</span>
+        <svg aria-hidden="true" class="rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none" />
+          <polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+        </svg>
+      </a>
+    </div>
+    <div class="aegov-pagination max-sm:hidden" role="navigation">
+      @@if (showFirstLast) {
+        <a class="aegov-pagination-first" aria-label="First Page" href="@@firstUrl" @@if(!firstUrl){aria-disabled="true"}>
+          <svg aria-hidden="true" class="rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+            <rect width="256" height="256" fill="none" />
+            <polyline points="200 208 120 128 200 48" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+            <polyline points="120 208 40 128 120 48" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+          </svg>
+          <span>First</span>
+        </a>
+      }
+      <a class="aegov-pagination-previous" rel="prev" aria-label="Previous Page" href="@@previousUrl" @@if(!previousUrl){aria-disabled="true"}>
+        <svg aria-hidden="true" class="rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none" />
+          <polyline points="160 208 80 128 160 48" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+        </svg>
+        <span>Previous</span>
+      </a>
+  
+      @@for (var i = 0; i < pageLinks.length; i++) {
+        `+ (pageLinks[i] === currentPage
+          ? '<span aria-current="page" class="aegov-pagination-current">' + pageLinks[i] + '</span>'
+          : (pageLinks[i] === '...'
+            ? '<span class="aegov-pagination-extend">...</span>'
+            : '<a class="aegov-pagination-page ' +
+              (pageLinks[i] < currentPage ? 'aegov-pagination-smaller' : '') +
+              (pageLinks[i] > currentPage ? 'aegov-pagination-larger' : '') +
+              '" title="Page ' + pageLinks[i] + '" href="' + (typeof pageLinks[i] === 'number' ? '@@baseUrl' + pageLinks[i] : '#') + '">' + pageLinks[i] + '</a>'
+          )
+        ) +`
+      }
+  
+      <a class="aegov-pagination-next" rel="next" aria-label="Next Page" href="@@nextUrl" @@if(!nextUrl){aria-disabled="true"}>
+        <span>Next</span>
+        <svg aria-hidden="true" class="rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none" />
+          <polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+        </svg>
+      
+      </a>
+      @@if (showFirstLast) {
+        <a class="aegov-pagination-last" aria-label="Last Page" href="@@lastUrl" @@if(!lastUrl){aria-disabled="true"}>
+          <span>Last</span>
+          <svg aria-hidden="true" class="rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+            <rect width="256" height="256" fill="none" />
+            <polyline points="56 48 136 128 56 208" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+            <polyline points="136 48 216 128 136 208" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+          </svg>
+         
+        </a>
+      }
+    </div>
+  </div>

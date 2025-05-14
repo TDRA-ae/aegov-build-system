@@ -1,0 +1,39 @@
+<!-- components/dropdown/dropdown-header-divider-icon.html -->
+
+<!-- Button to trigger the dropdown -->
+<button id="@@buttonId" data-dropdown-toggle="@@dropdownId" data-dropdown-placement="@@if(context.placement){@@placement}" data-dropdown-trigger="@@if(context.trigger){@@trigger}" class="aegov-btn" type="button">
+  @@buttonText
+  <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+    <rect width="256" height="256" fill="none" />
+    <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+  </svg>
+</button>
+
+<!-- Dropdown menu -->
+<div id="@@dropdownId" class="aegov-dropdown hidden w-52">
+  <div class="dropdown-header">
+    <div class="text-sm">@@smallTitle</div>
+    <div class="font-bold truncate">@@title</div>
+  </div>
+
+  <div class="dropdown-body divide-y divide-aeblack-50 text-aeblack-600">
+    @@for (var i = 0; i < sections.length; i++) {
+      <ul class="py-1" role="menu" aria-labelledby="@@buttonId">`+
+        (function () {
+          var html = "";
+          for (var j = 0; j < sections[i].items.length; j++) {
+            var item = sections[i].items[j];
+            html += '<li>' +
+              '<a href="' + item.link + '" class="dropdown-item">';
+            html += (item.icon ? item.icon : '');
+            html += '<span>' + item.text + '</span>' +
+              '</a>' +
+            '</li>';
+          }
+          return html;
+        })()
+      +`</ul>
+    }
+  </div>
+  
+</div>

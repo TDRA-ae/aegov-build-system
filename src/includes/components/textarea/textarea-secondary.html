@@ -1,0 +1,15 @@
+<div class="aegov-form-control control-secondary @@if(context.size){@@size}">
+    <label for="@@textareaId">@@labelText</label>
+    <div class="form-control-input">
+      <textarea
+        id="@@textareaId"
+        name="@@textareaName"
+        rows="@@rows"
+        @@if(!('showPlaceholder' in context) || context.showPlaceholder){placeholder="@@placeholder" }
+        @@if(context.additionalAttributes){@@additionalAttributes}
+        @@if(context.disabled){disabled aria-disabled="true"}
+        @@if(context.readonly){readonly aria-readonly="true"}
+        @@if(context.required){required aria-required="true"}
+      ></textarea>
+    </div>
+  </div>

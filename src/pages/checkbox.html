@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkbox</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Checkbox component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li class="space-y-4">
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">standard checkbox with sizes and state</h3>
+            @@loop('components/checkbox/checkbox-standard.html', [
+            {
+              "id": "checkbox1",
+              "name": "terms",
+              "value": "agree",
+              "labelText": "I agree to the terms 1",
+              "checked": "false",
+              "disabled": "false",
+              "size": "check-lg"
+            },
+            {
+              "id": "checkbox2",
+              "name": "updates",
+              "value": "subscribe",
+              "labelText": "Subscribe to updates (responsive checkbox example)",
+              "checked": "true",
+              "disabled": "false",
+              "additional-class": "check-sm md:check-base xl:check-lg"
+            },
+            {
+              "id": "checkbox3",
+              "name": "updates",
+              "value": "subscribe",
+              "labelText": "Base size standard checkbox",
+              "checked": "true",
+              "disabled": "false"
+            },
+            {
+              "id": "checkbox4",
+              "name": "readonly",
+              "value": "yes",
+              "labelText": "Read-only",
+              "checked": "false",
+              "disabled": "true",
+              "size": "check-sm"
+            }
+          ])          
+                                
+          </li>
+          <li class="space-y-4">
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">checkbox Use of secondary colour </h3>
+            @@loop('components/checkbox/checkbox-secondary-color.html', [
+            {
+              "id": "checkbox11",
+              "name": "terms",
+              "value": "agree",
+              "labelText": "I agree to the terms",
+              "checked": "false",
+              "disabled": "false"
+            },
+            {
+              "id": "checkbox22",
+              "name": "updates",
+              "value": "subscribe",
+              "labelText": "Subscribe to updates",
+              "checked": "true",
+              "disabled": "false"
+            },
+            {
+              "id": "checkbox33",
+              "name": "readonly",
+              "value": "yes",
+              "labelText": "Read-only",
+              "checked": "false",
+              "disabled": "true"
+            }
+          ])          
+                                
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Checkbox inline link</h3>
+            <div>
+              @@include('components/checkbox/checkbox-inline-link.html', {
+                "id": "terms-checkbox",
+                "name": "terms",
+                "value": "agree",
+                "checked": "false",
+                "disabled": "false",
+                "labelText": "I agree with the",
+                "linkText": "terms and conditions",
+                "linkHref": "#",
+                "linkTarget": "_blank"
+              })              
+            </div>
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">With additional description</h3>
+            <div class="space-y-4">
+              @@include('components/checkbox/checkbox-description.html', {
+                "id": "alert-checkbox",
+                "name": "alert-checkbox",
+                "value": "1",
+                "labelText": "Alerts",
+                "description": "Get notified when there is a critical issue.",
+                "checked": "true",
+                "disabled": "false"
+              })
+            
+              @@include('components/checkbox/checkbox-description.html', {
+                "id": "promo-checkbox",
+                "name": "promo-checkbox",
+                "value": "2",
+                "labelText": "Promotions",
+                "description": "Get notified when there is an offer.",
+                "checked": "false",
+                "disabled": "false"
+              })
+            
+              @@include('components/checkbox/checkbox-description.html', {
+                "id": "upgrade-checkbox",
+                "name": "upgrade-checkbox",
+                "value": "3",
+                "labelText": "Upgrades",
+                "description": "Get notified about critical upgrades to the system.",
+                "checked": "false",
+                "disabled": "false"
+              })
+            </div>
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">As a list element</h3>
+            <div class="divide-y divide-aeblack-100">
+              @@include('components/checkbox/checkbox-list-item.html', {
+                "id": "person-1",
+                "name": "person-1",
+                "value": "1",
+                "labelText": "Abdullah Al Mehri",
+                "checked": "false",
+                "disabled": "false"
+              })
+            
+              @@include('components/checkbox/checkbox-list-item.html', {
+                "id": "person-2",
+                "name": "person-2",
+                "value": "2",
+                "labelText": "Maryam Al Kamali",
+                "checked": "false",
+                "disabled": "false"
+              })
+            
+              @@include('components/checkbox/checkbox-list-item.html', {
+                "id": "person-3",
+                "name": "person-3",
+                "value": "3",
+                "labelText": "Shehzad Obaid",
+                "checked": "false",
+                "disabled": "false"
+              })
+            
+              @@include('components/checkbox/checkbox-list-item.html', {
+                "id": "person-4",
+                "name": "person-4",
+                "value": "4",
+                "labelText": "Ramakrishnan Iyer",
+                "checked": "false",
+                "disabled": "false"
+              })
+            </div>
+            
+          </li>
+          </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

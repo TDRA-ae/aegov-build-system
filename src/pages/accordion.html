@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accordion</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Accordion component</h2>
+        <ul class="space-y-6">
+            <li>
+                <div>
+                  <div class="aegov-accordion [&_.accordion-active_svg]:rotate-180" id="accordion-collapse" data-accordion="collapse">
+                    @@loop('components/accordion/accordion-item.html', [{
+                      "headId": "acc-v3-head-1",
+                      "bodyId": "acc-v3-body-1",
+                      "expanded": "false",
+                      "title": "What is the meaning of a design system?",
+                      "contenBody": "<p>A Design System is a collection of reusable components...</p><p>It ensures consistency across digital products.</p>"
+                    }, {
+                      "headId": "acc-v3-head-2",
+                      "bodyId": "acc-v3-body-2",
+                      "expanded": "true",
+                      "title": "What are components?",
+                      "contenBody": "<p>Components are reusable UI elements like buttons, forms, etc.</p>"
+                    }])
+                  </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+<script src="./js/aegov-scripts.js"></script>    
+<script src="./js/script.js"></script>    
+</body>
+</html>

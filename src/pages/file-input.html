@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>File Input</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">File Input component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">File Input</h3>
+            @@include('components/file-input/file-input.html', {
+              "inputId": "file-uploader-01",
+              "buttonText": "Upload file",
+              "inputName": "file-uploader-01",
+              "secondary":true,
+              "icon":'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="file-summary w-5 h-5"><rect width="256" height="256" fill="none"/><line x1="128" y1="152" x2="128" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="88 80 128 40 168 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">File Input secondary color</h3>
+            @@include('components/file-input/file-input.html', {
+              "buttonClass": "btn-secondary",
+              "inputId": "file-uploader-secondary",
+              "buttonText": "Upload file",
+              "inputName": "file-uploader-secondary",
+              "icon":'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="file-summary w-5 h-5"><rect width="256" height="256" fill="none"/><line x1="128" y1="152" x2="128" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="88 80 128 40 168 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">File Input</h3>
+            @@include('components/file-input/file-input-single-image.html', {
+              "inputId": "file-uploader-02",
+              "inputName": "file-uploader-02",
+              "buttonText": "Upload an image",
+              "disabled": true,
+              "previewIcon": '<svg class="h-12 w-12 text-slate-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd"></path></svg>'
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">with a drag/drop UI</h3>
+            @@include('components/file-input/file-input-dragdrop.html', {
+              "additionalClass": "mt-6",
+              "labelText": "Cover photo",
+              "inputId": "fileDragDrop",
+              "inputName": "fileDragDrop",
+              "buttonText": "Upload a file",
+              "accept": ".png, .jpg, .gif",
+              "note": "PNG, JPG, GIF up to 10MB",
+              "icon": "<svg viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path fill-rule='evenodd' d='M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z' clip-rule='evenodd'/></svg>",
+              "disabled": true
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Default UI with size</h3>
+            @@include('components/file-input/default-file-input.html', {
+              "size": "control-sm",
+              "inputId": "fileInput-sm",
+              "inputName": "fileInput-sm",
+              "labelText": "Upload a file"
+            })
+            
+            @@include('components/file-input/default-file-input.html', {
+              "size": "",
+              "inputId": "fileInput-base",
+              "inputName": "fileInput-base",
+              "labelText": "Upload a file",
+            })
+            
+            @@include('components/file-input/default-file-input.html', {
+              "size": "control-lg",
+              "inputId": "fileInput-lg",
+              "inputName": "fileInput-lg",
+              "labelText": "Upload a file",
+              "disabled" : true
+            })
+          </li>
+
+
+          
+          
+        </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

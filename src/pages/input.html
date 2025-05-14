@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Input</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Input component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input Default</h3>
+            @@include('components/input/input.html', {
+              "inputId": "description",
+              "inputName": "description",
+              "type":"text",
+              "labelText": "First Name",
+              "placeholder": "Your first name"
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input secondary</h3>
+            @@include('components/input/input-secondary-color.html', {
+              "inputId": "descriptionSec",
+              "inputName": "descriptionSec",
+              "type":"text",
+              "labelText": "First Name",
+              "placeholder": "Your first name"
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input description</h3>
+            @@include('components/input/input-description.html', {
+              "inputId": "description",
+              "inputName": "description",
+              "type":"email",
+              "labelText": "Email",
+              "inputDescription": "We require your email address to send you important updates. We will never share your email with anyone else.",
+              "placeholder": "Your first name"
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input with error message</h3>
+            @@include('components/input/input-error.html', {
+              "inputId": "description",
+              "inputName": "emailError",
+              "type":"email",
+              "labelText": "Email",
+              "placeholder": "Email address",
+              "errorMessage": "<strong>Error: </strong>We encountered a problem with your input."
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input prefix icon</h3>
+            @@include('components/input/input-prefix.html', {
+              "labelText": "Search",
+              "inputName": "search_prefix",
+              "inputId": "search_prefix",
+              "placeholder": "Search for something",
+              "type": "search",
+              "prefix": "http://"
+            })
+                      
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input suffix icon</h3>
+            @@include('components/input/input-suffix.html', {
+              "labelText": "Search",
+              "inputName": "search_suffix",
+              "inputId": "search_suffix",
+              "placeholder": "Search for something",
+              "type": "search",
+              "suffix": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'/><circle cx='112' cy='112' r='80' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'/><line x1='168.57' y1='168.57' x2='224' y2='224' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'/></svg>"
+            })     
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input date</h3>
+            @@include('components/input/input.html', {
+              "labelText": "Date",
+              "inputName": "date_select",
+              "inputId": "date_select",
+              "placeholder": "Search for something",
+              "showPlaceholder":false,
+              "type": "date",
+              "additionalAttributes":'value="2018-07-22" min="2018-01-01" max="2018-12-31"'
+            })     
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Input range</h3>
+              @@include('components/input/input-range.html', {
+                inputId: "range_input",
+                inputName: "range_input",
+                labelText: "A range",
+                min: "0",
+                max: "100",
+                value: "20",
+                outputId: "rangeelemoutput"
+              })
+            
+          </li>
+        </ul>
+    </div>
+
+
+<!-- if you want to use additional Attributes use  "additionalAttributes" : "minlength='4' "maxlength='5' "-->
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

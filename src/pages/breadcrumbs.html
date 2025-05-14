@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blockquote</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Blockquote component</h2>
+        <ul class="space-y-6">
+          <li>
+            @@include('components/breadcrumbs/breadcrumbs.html', {
+              "additionalClass": "with-seperator",
+              "items": [
+                { "text": "Home", "href": "/" },
+                { "text": "Blog", "href": "/blog" },
+                { "text": "Post", "href": "/blog/post", "title": "Go to post" },
+                { "text": "Current Page with long title", "current": true }
+              ]
+            })
+          </li>
+          <li>
+            @@include('components/breadcrumbs/breadcrumbs-home-icon.html', {
+              "additionalClass": "with-seperator",
+              "items": [
+                { "text": "Home", "href": "/" },
+                { "text": "Media centre", "href": "/media-centre", "title": "Media centre" },
+                { "text": "News", "href": "/news", "title": "News" },
+                { "text": "Press release", "href": "/press-release", "title": "Press release" },
+                { "text": "A really long page name that must be affected.", "current": true }
+              ]
+            })
+            
+          </li>
+          <li>
+            @@include('components/breadcrumbs/breadcrumbs-caret-icon.html', {
+              "additionalClass": "",
+              "items": [
+                { "text": "Home", "href": "/" },
+                { "text": "Media centre", "href": "/media-centre", "title": "Media centre" },
+                { "text": "News", "href": "/news", "title": "News" },
+                { "text": "Press release", "href": "/press-release", "title": "Press release" },
+                { "text": "A really long page name that must be affected.", "current": true }
+              ]
+            })
+            
+          </li>
+          </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

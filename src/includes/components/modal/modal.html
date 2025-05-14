@@ -1,0 +1,18 @@
+<button data-modal-target="@@modalId" data-modal-toggle="@@modalId" class="aegov-btn" type="button">
+    @@buttonText
+</button>
+
+<div id="@@modalId" tabindex="-1" aria-hidden="true" class="aegov-modal hidden z-50" role="dialog">
+    <div class="relative sm:w-full lg:max-w-xl max-h-full">
+        <div class="aegov-modal-wrapper bg-whitely-100 p-4 md:p-5 xl:p-6">
+            <div>
+                <div>
+                    @@modalBody
+                </div>
+            </div>
+            <div class="mt-6 md:mt-7 xl:mt-8 sm:flex sm:flex-row-reverse sm:gap-3">
+                <button data-modal-hide="@@modalId" type="button" class="aegov-btn w-full sm:w-auto">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

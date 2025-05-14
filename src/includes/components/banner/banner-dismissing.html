@@ -1,0 +1,29 @@
+<div>
+	<div class="container">
+		<div id="@@bannerId" class="aegov-banner bg-slate-700 rounded-xl">
+			<div class="flex items-center justify-between gap-3">
+				<div class="banner-content text-slate-50 flex flex-col md:flex-row md:items-center gap-3">
+					@@message
+					<a href="@@linkUrl"  
+						class="aegov-link link-underline text-slate-50 hover:text-slate-100 focus-visible:ring-slate-400 focus-visible:ring-offset-slate-700">
+						@@linkText
+						<svg class="link-icon rtl:-scale-x-100" aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+							<rect width="256" height="256" fill="none"></rect>
+							<polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor"
+								stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+						</svg>
+					</a>
+				</div>
+				<button class="banner-dismiss text-slate-50" data-dismiss-target="#@@bannerId"
+					aria-label="Close">
+					<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path
+							d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z">
+						</path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

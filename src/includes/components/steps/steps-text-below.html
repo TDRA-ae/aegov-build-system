@@ -1,0 +1,13 @@
+<nav aria-label="Progress" class="aegov-step @@if(context.stepSize){@@stepSize} @@additional-class">
+	<ol role="list" class="flex items-center justify-between">
+		@@for (var i = 0; i < steps.length; i++) {
+		`+`<li class="relative w-full `+(steps[i].status === 'completed' ? 'step-completed' : '')+` `+(steps[i].status === 'current' ? 'step-current' : '')+` `+(steps[i].status === 'upcoming' ? 'step-upcoming' : '')+`">
+			`+(i < steps.length - 1 ? '<div class="step-connector" aria-hidden="true"><div class="step-connector-state"></div></div>' : '')+`
+			<a href="`+steps[i].href+`" class="step-badge">
+			`+(steps[i].status === 'current' || steps[i].status === 'upcoming' ? steps[i].number : '')+`
+			<span class="step-text-below">`+(steps[i].text ? steps[i].text : 'Step ' + steps[i].number)+`</span>
+			</a>
+		</li>`+`
+		}
+	</ol>
+</nav>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>select</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">select component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Standard select</h3>
+            @@include('./components/select/select-standard.html', {
+              "id": "opt1",
+              "name": "opt1",
+              "labelText": "Select an option",
+              "size":"control-sm",
+              "options": [
+                { "value": "option1", "text": "Option 1" },
+                { "value": "option2", "text": "Option 2" },
+                { "value": "option3", "text": "Option 3" }
+              ]
+            })
+            @@include('./components/select/select-standard.html', {
+              "id": "opt2",
+              "name": "opt2",
+              "labelText": "Select an option",
+              "size":"control-base",
+              "options": [
+                { "value": "option1", "text": "Option 1" },
+                { "value": "option2", "text": "Option 2" },
+                { "value": "option3", "text": "Option 3" }
+              ]
+            })
+            @@include('./components/select/select-standard.html', {
+              "id": "opt2",
+              "name": "opt2",
+              "labelText": "Select an option",
+              "size":"control-lg",
+              "options": [
+                { "value": "option1", "text": "Option 1" },
+                { "value": "option2", "text": "Option 2" },
+                { "value": "option3", "text": "Option 3" }
+              ]
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Multi-select</h3>
+            @@include('./components/select/select-standard.html', {
+              "id": "country_multiple",
+              "name": "country_multiple",
+              "labelText": "Select options",
+              "multiple": true,
+              "autocomplete": "country_multiple_name",
+              "options": [
+                { "value": "ae", "text": "United Arab Emirates" },
+                { "value": "in", "text": "India" },
+                { "value": "uk", "text": "United Kingdom" },
+                { "value": "us", "text": "USA" }
+              ]
+            })
+        </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Select with Error Message</h3>
+          @@include('./components/select/select-error.html', {
+            "id": "error_select",
+            "name": "error_select",
+            "labelText": "Select an option",
+            "errorMessage": "We encountered a problem with your selection.",
+            "options": [
+              { "value": "option1", "text": "Option 1" },
+              { "value": "option2", "text": "Option 2" },
+              { "value": "option3", "text": "Option 3" }
+            ]
+          })
+      </li>
+      <li>
+        <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Use of secondary colour</h3>
+        @@include('./components/select/select-standard.html', {
+          "id": "sec-country",
+          "name": "country",
+          "labelText": "Select an option",
+          "secondary": true,
+          "autocomplete": "country-name",
+          "options": [
+            { "value": "ae", "text": "United Arab Emirates" },
+            { "value": "in", "text": "India" },
+            { "value": "uk", "text": "United Kingdom" }
+          ]
+        })
+        @@include('./components/select/select-secondary.html', {
+          "id": "sec-country2",
+          "name": "country2",
+          "labelText": "Select an option",
+          "secondary": true,
+          "autocomplete": "country-name",
+          "options": [
+            { "value": "ae", "text": "United Arab Emirates" },
+            { "value": "in", "text": "India" },
+            { "value": "uk", "text": "United Kingdom" }
+          ]
+        })
+    </li>
+      </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div role="alert" class="aegov-alert @@alertType">
+    <div class="alert-icon">
+        @@icon
+    </div>
+    <div class="alert-content">
+        <div class="alert-title">@@title</div>
+        @@for (var i = 0; i < description.length; i++) {
+            <p>`+description[i]+`</p>
+        }
+        <div class="alert-footer">
+            <a href="@@linkUrl1">
+                @@linkText1
+            </a>
+            <a href="@@linkUrl2">
+                @@linkText2
+            </a>
+        </div>
+    </div>
+</div>

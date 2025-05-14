@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Textarea</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Textarea component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Textarea standard</h3>
+            @@include('./components/textarea/textarea.html', {
+              "textareaId": "description",
+              "labelText": "Description",
+              "textareaName": "description",
+              "rows": "4",
+              "placeholder": "Enter your description"
+            })
+            @@include('./components/textarea/textarea.html', {
+              "textareaId": "description",
+              "size":"control-sm",
+              "labelText": "Description(sm)",
+              "textareaName": "description",
+              "rows": "4",
+              "placeholder": "Enter your description"
+            })
+            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Textarea with error message</h3>
+            @@include('./components/textarea/textarea-with-error.html', {
+              "textareaId": "error_description",
+              "labelText": "Description",
+              "textareaName": "error_description",
+              "rows": "4",
+              "placeholder": "Enter your description",
+              "errorMessage": "We encountered a problem with your field."
+            })
+        </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Use of secondary colour</h3>
+          @@include('./components/textarea/textarea-secondary.html', {
+            "textareaId": "description_sec",
+            "labelText": "Description_sec",
+            "textareaName": "description_sec",
+            "rows": "4",
+            "placeholder": "Enter your description"
+          })
+      </li>
+        
+      </ul>
+    </div>
+    <!-- You can add additionalAttribute as well -->
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

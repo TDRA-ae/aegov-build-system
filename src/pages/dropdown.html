@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Dropdown component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">standard dropdown</h3>
+              @@include('components/dropdown/dropdown-standard.html', {
+                  "buttonId": "2",
+                  "dropdownId": "baseDropdownMenu",
+                  "buttonClass": "",
+                  "buttonLabel": "Open Dropdown",
+                  "placement": "right",
+                  "items": [
+                    { "label": "An item", "href": "#" },
+                    { "label": "An item", "href": "#" },
+                    { "label": "An item", "href": "#" }
+                  ]
+                })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">header icon dropdown</h3>
+
+
+          <!-- index.html -->
+              @@include('components/dropdown/dropdown-header-divider-icon.html', {
+                "buttonId": "dropdownButton-2",
+                "dropdownId": "dropdownHeaderDividerIcon",
+                "buttonText": "Open dropdown",
+                "smallTitle": "Signed in as",
+                "title": "john@example.com",
+                "sections": [
+                  {
+                    "items": [
+                      { "link": "#",
+                        "text": "Menu item 1" 
+                      }
+                    ]
+                  },
+                  {
+                    "items": [
+                      { "link": "#", 
+                      "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true"><rect width="256" height="256" fill="none"/><rect x="32" y="64" width="192" height="144" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M168,64V48a16,16,0,0,0-16-16H104A16,16,0,0,0,88,48V64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M224,118.31A191.09,191.09,0,0,1,128,144a191.14,191.14,0,0,1-96-25.68" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="112" y1="112" x2="144" y2="112" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>', 
+                      "text": "Menu item 2" 
+                    },
+                      { "link": "#", 
+                      "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true"><rect width="256" height="256" fill="none"/><line x1="96" y1="112" x2="160" y2="112" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M79.93,211.11a96,96,0,1,0-35-35h0L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>', 
+                      "text": "Menu item 3" 
+                    }
+                    ]
+                  },
+                  {
+                    "items": [
+                      { "link": "#", 
+                      "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true"><rect width="256" height="256" fill="none"/><line x1="8" y1="120" x2="248" y2="120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="76" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="180" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="103.72" y1="184" x2="152.28" y2="184" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M40,120,89.89,51.29a8,8,0,0,1,12.7-.29l12.94,15a16,16,0,0,0,24.94,0l12.94-15a8,8,0,0,1,12.7.29L216,120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>', 
+                      "text": "Menu item 4" 
+                    }
+                    ]
+                  }
+                ]
+              })
+
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">dropdown with icon and text</h3>
+              @@include('components/dropdown/dropdown-icon-text.html', {
+                  "buttonId": "3",
+                  "dropdownId": "IconDropdownMenu",
+                  "buttonClass": "",
+                  "buttonLabel": "Open Dropdown",
+                  "items": [
+                    { 
+                      "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true"><rect width="256" height="256" fill="none"/><line x1="8" y1="120" x2="248" y2="120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="76" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="180" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="103.72" y1="184" x2="152.28" y2="184" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M40,120,89.89,51.29a8,8,0,0,1,12.7-.29l12.94,15a16,16,0,0,0,24.94,0l12.94-15a8,8,0,0,1,12.7.29L216,120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+                      "text": "Icon with text asd", 
+                      "href": "#" 
+                    },
+                    { 
+                      "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true"><rect width="256" height="256" fill="none"/><line x1="8" y1="120" x2="248" y2="120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="76" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="180" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="103.72" y1="184" x2="152.28" y2="184" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M40,120,89.89,51.29a8,8,0,0,1,12.7-.29l12.94,15a16,16,0,0,0,24.94,0l12.94-15a8,8,0,0,1,12.7.29L216,120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+                      "text": "Icon with text", 
+                      "href": "#" 
+                    },
+                    { 
+                      "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true"><rect width="256" height="256" fill="none"/><line x1="8" y1="120" x2="248" y2="120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="76" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="180" cy="180" r="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="103.72" y1="184" x2="152.28" y2="184" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M40,120,89.89,51.29a8,8,0,0,1,12.7-.29l12.94,15a16,16,0,0,0,24.94,0l12.94-15a8,8,0,0,1,12.7.29L216,120" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+                      "text": "Icon with text", 
+                      "href": "#" 
+                    }
+                  ]
+                })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Dropdown with checkbox</h3>
+            <!-- Component start -->
+            <!-- Button to trigger the dropdown -->
+            <button id="dropdownButton-5" data-dropdown-toggle="dropdownCheckboxes" class="aegov-btn" type="button">
+              Open dropdown
+              <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none" />
+                <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownCheckboxes" class="aegov-dropdown hidden w-80">
+              <div class="dropdown-body mb-4">
+                @@include('components/checkbox/checkbox-description.html', {
+                  "id": "alert-checkbox",
+                  "name": "alert-checkbox",
+                  "value": "1",
+                  "label": "Alerts",
+                  "description": "Get notified when there is a critical issue.",
+                  "checked": "true",
+                  "disabled": "false",
+                  "additional-class": "rounded-md hover:bg-aeblack-50 px-5 pt-4 pb-2"
+                })
+              
+                @@include('components/checkbox/checkbox-description.html', {
+                  "id": "promo-checkbox",
+                  "name": "promo-checkbox",
+                  "value": "2",
+                  "label": "Promotions",
+                  "description": "Get notified when there is an offer.",
+                  "checked": "false",
+                  "disabled": "false",
+                  "additional-class": "rounded-md hover:bg-aeblack-50 px-5 pt-4 pb-2"
+                })
+              
+                @@include('components/checkbox/checkbox-description.html', {
+                  "id": "upgrade-checkbox",
+                  "name": "upgrade-checkbox",
+                  "value": "3",
+                  "label": "Upgrades",
+                  "description": "Get notified about critical upgrades to the system.",
+                  "checked": "false",
+                  "disabled": "false",
+                  "additional-class": "rounded-md hover:bg-aeblack-50 px-5 pt-4 pb-2"
+                })
+              </div>
+            </div>
+            <!-- Component End -->
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Dropdown Custom UI as menu - with trigger example</h3>
+            @@include('components/dropdown/dropdown-custom-ui-menu.html', {
+              "buttonId": "6",
+              "menuId": "dropdownDescMenu",
+              "buttonLabel": "Open dropdown",
+              "trigger": "hover",
+              "menuItems": [
+                {
+                  "title": "PUBLISHED",
+                  "description": "by publishing an item, the content will be pushed on the production version of the site.",
+                  "url": "#"
+                },
+                {
+                  "title": "DRAFT",
+                  "description": "Save a working copy of your file and save the progress before publishing",
+                  "url": "#"
+                },
+                {
+                  "title": "PRIVATE",
+                  "description": "make this post as a private post and only visible to selected user",
+                  "url": "#"
+                }
+              ]
+            })            
+          </li>
+        </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

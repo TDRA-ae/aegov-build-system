@@ -1,0 +1,9 @@
+<div class="aegov-form-control aegov-file-input-control @@if(context.size){@@size} @@if(context.secondary){control-secondary} @@additional-class">
+  <label for="@@inputId" class="file-input-label aegov-btn @@buttonClass @@if(context.disabled){opacity-50 cursor-not-allowed pointer-events-none}">
+    @@if (icon) {
+      @@icon
+    }
+    @@buttonText
+  </label>
+  <input type="file" name="@@inputName" id="@@inputId" @@if(context.disabled){disabled}>
+</div>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Tooltip component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6"></h3>
+            <div class="flex flex-wrap gap-10">
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-default",
+                "buttonText": "Default tooltip",
+                "tooltipContent": "tooltip default"
+              })
+              
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-hover",
+                "buttonText": "Tooltip hover",
+                "tooltipContent": "Tooltip content",
+                "trigger": "hover"
+              })
+              
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-click",
+                "buttonText": "Tooltip click",
+                "tooltipContent": "Tooltip content",
+                "trigger": "click"
+              })
+              
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-animation",
+                "buttonText": "Animated tooltip",
+                "tooltipContent": "Tooltip content",
+                "animationClass": "transition-all duration-500"
+              })
+              
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-top",
+                "buttonText": "Tooltip top",
+                "tooltipContent": "Tooltip on top",
+                "placement": "top"
+              })
+              
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-right",
+                "buttonText": "Tooltip right",
+                "tooltipContent": "Tooltip on right",
+                "placement": "right"
+              })
+              
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-bottom",
+                "buttonText": "Tooltip bottom",
+                "tooltipContent": "Tooltip on bottom",
+                "placement": "bottom"
+              })
+              
+              @@include('./components/tooltip/tooltip.html', {
+                "tooltipId": "tooltip-left",
+                "buttonText": "Tooltip left",
+                "tooltipContent": "Tooltip on left",
+                "placement": "left"
+              })
+            </div>
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6"></h3>
+           
+        </li>
+      </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

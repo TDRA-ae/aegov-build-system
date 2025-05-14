@@ -1,0 +1,26 @@
+<div class="aegov-tab tab-pills">
+    <ul class="tab-items gap-4 md:gap-6 lg:gap-7 xl:gap-8 max-xl:overflow-auto" data-tabs-toggle="#@@tabsId" role="tablist">
+      @@for (var i = 0; i < tabs.length; i++) {
+        <li role="presentation">
+          <a
+            href="#"
+            onclick="return false;"
+            data-tabs-target="#@@tabBodyId-@@tabsId-`+i+`"
+            role="tab"
+            id="@@tabId-@@tabsId-`+i+`"
+            aria-controls="@@tabBodyId-@@tabsId-`+i+`"
+            class="tab-link whitespace-nowrap h-10 lg:h-12 px-4 lg:px-6 @@if(`+i === 0+`){active}"
+          >
+          `+tabs[i].title+`
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+  <div id="@@tabsId" class="py-4">
+    @@for (var i = 0; i < tabs.length; i++) {
+      <div class="tab-content @@if(`+i !== 0+`){hidden}" role="tabpanel" id="@@tabBodyId-@@tabsId-`+i+`">
+        `+tabs[i].content+`
+      </div>
+    }
+  </div>

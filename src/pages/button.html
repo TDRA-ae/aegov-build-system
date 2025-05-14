@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container">
+        <h2 class="mb-4">Button component</h2>
+        <ul class="space-y-6">
+            <li>   
+                <div class="flex gap-4 items-center">
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-size": "btn-lg",
+                            "btn-text": "Solid large"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-state": "btn-outline",
+                            "btn-size": "btn-base",
+                            "btn-text": "outline base"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-state": "btn-soft",
+                            "btn-size": "btn-sm",
+                            "btn-text": "soft small"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-state": "btn-link",
+                            "btn-size": "btn-xs",
+                            "btn-text": "link extra small"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/leftIcon-primary-button.html', {
+                            "btn-size": "btn-base",
+                            "btn-text": "Left Icon",
+                            "btn-icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="84" cy="108" r="52" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M10.23,200a88,88,0,0,1,147.54,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M172,160a87.93,87.93,0,0,1,73.77,40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M152.69,59.7A52,52,0,1,1,172,160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/rightIcon-primary-button.html', {
+                            "btn-size": "btn-base",
+                            "btn-text": "Right Icon",
+                            "btn-icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="84" cy="108" r="52" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M10.23,200a88,88,0,0,1,147.54,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M172,160a87.93,87.93,0,0,1,73.77,40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M152.69,59.7A52,52,0,1,1,172,160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/dualIcon-primary-button.html', {
+                            "btn-state": "btn-solid",
+                            "btn-size": "btn-base",
+                            "btn-text": "Dual Icon",
+                            "btn-icon-left": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M50.69,184.92A127.52,127.52,0,0,0,64,128a63.85,63.85,0,0,1,24-50" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M128,128a191.11,191.11,0,0,1-24,93" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M96,128a32,32,0,0,1,64,0,223.12,223.12,0,0,1-21.28,95.41" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M218.56,184A289.45,289.45,0,0,0,224,128a96,96,0,0,0-192,0,95.8,95.8,0,0,1-5.47,32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M92.81,160a158.92,158.92,0,0,1-18.12,47.84" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M120,64.5a66,66,0,0,1,8-.49,64,64,0,0,1,64,64,259.86,259.86,0,0,1-2,32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M183.94,192q-2.28,8.88-5.18,17.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+                            "btn-icon-right": '<svg class="rtl:-scale-x-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+                        })
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h2 class="mb-4">Button component</h2>
+                <div class="flex gap-4 items-center">
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-size": "btn-lg",
+                            "btn-text": "Solid large"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-state": "btn-outline",
+                            "btn-size": "btn-base",
+                            "btn-text": "outline base"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-state": "btn-soft",
+                            "btn-size": "btn-sm",
+                            "btn-text": "soft small"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/standard-primary-button.html', {
+                            "btn-state": "btn-link",
+                            "btn-size": "btn-xs",
+                            "btn-text": "link extra small"
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/leftIcon-primary-button.html', {
+                            "btn-size": "btn-base",
+                            "btn-text": "Left Icon",
+                            "btn-icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="84" cy="108" r="52" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M10.23,200a88,88,0,0,1,147.54,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M172,160a87.93,87.93,0,0,1,73.77,40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M152.69,59.7A52,52,0,1,1,172,160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/rightIcon-primary-button.html', {
+                            "btn-size": "btn-base",
+                            "btn-text": "Right Icon",
+                            "btn-icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="84" cy="108" r="52" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M10.23,200a88,88,0,0,1,147.54,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M172,160a87.93,87.93,0,0,1,73.77,40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M152.69,59.7A52,52,0,1,1,172,160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+                        })
+                    </div>
+                    <div>
+                        @@include('components/button/dualIcon-primary-button.html', {
+                            "btn-state": "btn-solid",
+                            "btn-size": "btn-base",
+                            "btn-text": "Dual Icon",
+                            "btn-icon-left": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M50.69,184.92A127.52,127.52,0,0,0,64,128a63.85,63.85,0,0,1,24-50" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M128,128a191.11,191.11,0,0,1-24,93" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M96,128a32,32,0,0,1,64,0,223.12,223.12,0,0,1-21.28,95.41" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M218.56,184A289.45,289.45,0,0,0,224,128a96,96,0,0,0-192,0,95.8,95.8,0,0,1-5.47,32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M92.81,160a158.92,158.92,0,0,1-18.12,47.84" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M120,64.5a66,66,0,0,1,8-.49,64,64,0,0,1,64,64,259.86,259.86,0,0,1-2,32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M183.94,192q-2.28,8.88-5.18,17.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
+                            "btn-icon-right": '<svg class="rtl:-scale-x-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+                        })
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+<script src="./js/script.js"></script>    
+</body>
+</html>

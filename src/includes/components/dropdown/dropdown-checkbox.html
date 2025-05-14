@@ -1,0 +1,28 @@
+<!-- Dropdown button -->
+<button id="@@buttonId" data-dropdown-toggle="@@dropdownId" data-dropdown-placement="@@if(context.placement){@@placement}" data-dropdown-trigger="@@if(context.trigger){@@trigger}" class="aegov-btn" type="button">
+    @@buttonText
+    <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <rect width="256" height="256" fill="none" />
+      <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </svg>
+  </button>
+  
+  <!-- Dropdown menu -->
+  <div id="@@dropdownId" class="aegov-dropdown hidden w-80">
+    <div class="dropdown-body mb-4">
+        @@for (var i = 0; i < context.items.length; i++) {
+            @@include('components/checkbox/checkbox-standard.html', {
+              "id": "@@context.items[i].id",
+              "name": "@@context.items[i].name",
+              "value": "@@context.items[i].value",
+              "label": "@@context.items[i].label",
+              "description": "@@context.items[i].description",
+              "checked": "@@context.items[i].checked",
+              "disabled": "@@context.items[i].disabled",
+              "additional-class": "rounded-md hover:bg-aeblack-50 px-5 pt-4 pb-2"
+            })
+          }
+          
+    </div>
+  </div>
+  

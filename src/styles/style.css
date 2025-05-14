@@ -1,0 +1,5 @@
+/* create a new css file, example /src/style.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

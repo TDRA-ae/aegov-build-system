@@ -1,0 +1,18 @@
+<div class="aegov-banner @@if (context.bannerPosition) {@@bannerPosition} @@if (!context.bannerPosition) {banner-top} bg-camel-600 border-camel-500">
+    <div class="container">
+        <div
+            class="banner-content text-camel-50 flex flex-wrap md:flex-nowrap items-center md:justify-center gap-3">
+           @@message
+            <a href="@@linkUrl"
+                class="aegov-link link-underline text-camel-50 hover:text-camel-100 focus-visible:ring-camel-400 focus-visible:ring-offset-camel-600">
+                @@linkText
+                <svg class="link-icon rtl:-scale-x-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>

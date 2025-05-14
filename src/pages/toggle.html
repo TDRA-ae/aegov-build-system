@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Toggle</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Toggle component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Toggle standard</h3>
+            @@include('./components/toggle/toggle.html', {
+              "toggleId": "enable-switch",
+              "label": "Enable Feature",
+              "toggleName": "featureEnabled"
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Toggle with text</h3>
+            @@include('./components/toggle/toggle-with-text.html', {
+              "toggleId": "terms-agreement",
+              "label": "Agree to Terms",
+              "toggleText": "I agree with the terms and conditions"
+            })
+        </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Toggle with changing icon inside</h3>
+          @@include('./components/toggle/toggle-with-icon.html', {
+            "toggleId": "toggle-switch-icon-fb28fv2",
+            "label": "I agree with the terms and conditions",
+            "toggleText": "I agree with the terms and conditions"
+          })
+        </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Toggle with success colour</h3>
+            @@include('./components/toggle/toggle-with-success-color.html', {
+              "toggleId": "success-toggle",
+              "label": "Success State"
+            })
+        </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Toggle with mode</h3>
+          @@include('./components/toggle/toggle-with-mode.html', {
+            "toggleId": "dark-mode-switch",
+            "label": "Dark Mode"
+          })
+        </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Use of secondary colour</h3>
+          @@include('./components/toggle/toggle-secondary.html', {
+            "toggleId": "secondary-switch",
+            "label": "Secondary Color"
+          })
+        </li>
+      </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

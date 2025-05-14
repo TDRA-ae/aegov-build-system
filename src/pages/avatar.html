@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Avatar</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Avatar component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6"></h3>
+              @@include('components/avatar/avatar.html', {
+                "src": "/images/AbdullahBinDamithan-002.jpg",
+                "alt": "John Doe",
+                "type":"rounded",
+                "size": "avatar-xl"
+              })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6"></h3>
+            @@include('components/avatar/avatar-indicator.html', {
+              "src": "/images/AbdullahBinDamithan-002.jpg",
+              "alt": "John Doe",
+              "size": "avatar-xl",
+              "type":"rounded",
+              "indicator-color-class" : "bg-aegreen-500"
+            })
+        </li>
+      </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

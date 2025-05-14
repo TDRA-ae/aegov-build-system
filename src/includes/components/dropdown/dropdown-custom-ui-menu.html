@@ -1,0 +1,23 @@
+<!-- Button to trigger the dropdown -->
+<button id="dropdownButton-@@buttonId" data-dropdown-placement="@@if(context.placement){@@placement}" data-dropdown-trigger="@@if(context.trigger){@@trigger}"  data-dropdown-toggle="@@menuId" class="aegov-btn" type="button">
+    @@buttonLabel
+    <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <rect width="256" height="256" fill="none" />
+      <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+    </svg>
+</button>
+
+<!-- Dropdown menu -->
+<div id="@@menuId" class="aegov-dropdown hidden w-80">
+    <div class="dropdown-body">
+        @@for (var i = 0; i < menuItems.length; i++) {
+        <div class="group hover:bg-primary-500 p-4">
+            <a href="`+menuItems[i].url+`" onclick="return false;" class="no-underline">
+            <div class="font-bold text-aeblack-950 uppercase mb-2 group-hover:text-primary-50">`+menuItems[i].title+`</div>
+            <p class="text-sm text-aeblack-300 group-hover:text-whitely-50 !mb-0">`+menuItems[i].description+`</p>
+            </a>
+        </div>
+        }
+    </div>
+</div>
+  

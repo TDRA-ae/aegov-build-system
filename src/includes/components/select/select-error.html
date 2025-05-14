@@ -1,0 +1,16 @@
+<div class="aegov-form-control control-error @@if(context.size){@@size} @@additional-class">
+  @@if(context.labelText){<label for="@@id">@@labelText</label>}
+  <div class="form-control-input">
+    <select id="@@id" name="@@name" @@if(context.multiple){multiple} @@if(context.autocomplete){autocomplete="@@autocomplete"} @@if(context.disabled){disabled aria-disabled="true"} @@if(context.readonly){readonly aria-readonly="true"} @@if(context.required){required aria-required="true"}>
+      @@for (var i = 0; i < options.length; i++) {
+        <option value="`+options[i].value+`">`+options[i].text+`</option>
+      }
+    </select>
+  </div>
+  @@if (context.errorMessage) {
+    <p class="error-message"><strong>Error:</strong> @@errorMessage</p>
+  }
+  @@if (context.description) {
+    <p class="mt-2 text-xs leading-6 text-aeblack-500">@@description</p>
+  }
+</div>
