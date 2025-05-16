@@ -4,6 +4,7 @@
     type="radio"
     name="@@name"
     value="@@value"
+    @@if(context.additionalAttributes){@@additionalAttributes}
     @@if (context.checked) { checked }
     @@if (context.disabled) { disabled }
   >

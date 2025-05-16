@@ -9,12 +9,13 @@
       <h2 class="mb-8">File Input component</h2>
         <ul class="space-y-6 xl:w-7/12">
           <li>
-            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">File Input</h3>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">File Inputss</h3>
             @@include('components/file-input/file-input.html', {
               "inputId": "file-uploader-01",
               "buttonText": "Upload file",
               "inputName": "file-uploader-01",
               "secondary":true,
+              "additionalAttributes":'accept="image/png, image/jpeg"',
               "icon":'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="file-summary w-5 h-5"><rect width="256" height="256" fill="none"/><line x1="128" y1="152" x2="128" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M216,152v56a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="88 80 128 40 168 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>',
             })
           </li>

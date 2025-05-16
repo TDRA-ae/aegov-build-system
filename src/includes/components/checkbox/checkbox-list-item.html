@@ -5,6 +5,7 @@
     name="@@name"
     value="@@value"
     type="checkbox"
+    @@if(context.additionalAttributes){@@additionalAttributes}
     aria-describedby="@@id-description"
     @@if (context.checked ) { checked }
     @@if (context.disabled ) { disabled }

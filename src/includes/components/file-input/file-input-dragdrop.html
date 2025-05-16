@@ -6,7 +6,7 @@
       }
       <label for="@@inputId" class="cursor-pointer @@if(context.disabled){pointer-events-none}">
         <span>@@buttonText</span>
-        <input id="@@inputId" name="@@inputName" type="file" class="sr-only" accept="@@accept" @@if(context.disabled){disabled}>
+        <input id="@@inputId" name="@@inputName" type="file" class="sr-only" accept="@@accept" @@if(context.disabled){disabled} @@if(context.additionalAttributes){@@additionalAttributes}>
       </label>
       <span class="pl-1">or drag and drop</span>
       <p class="text-xs leading-5 text-slate-600">@@note</p>

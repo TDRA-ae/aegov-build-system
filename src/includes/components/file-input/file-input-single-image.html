@@ -8,7 +8,7 @@
         }
         @@buttonText
       </label>
-      <input type="file" name="@@inputName" id="@@inputId" @@if(context.disabled){disabled}>
+      <input type="file" name="@@inputName" id="@@inputId" @@if(context.disabled){disabled} @@if(context.additionalAttributes){@@additionalAttributes}>
     </div>
   </div>
 </div>

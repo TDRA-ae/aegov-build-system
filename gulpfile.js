@@ -10,7 +10,7 @@ const replace = require("gulp-replace"); // Add this at the top
 // ✅ Process HTML (Development → dist/)
 function htmlDev() {
   return src("src/pages/**/*.html")
-    .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "btn-state": "" } }))
+    .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "variant": "" } }))
      .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"')) // Remove extra spaces
     .on("error", console.log)
     .pipe(dest("dist"))
@@ -20,7 +20,7 @@ function htmlDev() {
 // ✅ Process HTML (Production → build/)
 function htmlBuild() {
   return src("src/pages/**/*.html")
-    .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "btn-state": "" } }))
+    .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "variant": "" } }))
      .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"')) // Remove extra spaces
     .on("error", console.log)
     .pipe(dest("build"));
