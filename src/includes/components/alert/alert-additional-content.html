@@ -1,7 +1,8 @@
 <div role="alert" class="aegov-alert @@variant">
-    <div class="alert-icon">
+     @@if (context.icon) {
+	<div class="alert-icon">
         @@icon
-    </div>
+	</div>}
     <div class="alert-content">
         <div class="alert-title">@@title</div>
         @@for (var i = 0; i < description.length; i++) {

@@ -1,9 +1,8 @@
 <div class="aegov-alert @@variant @@additional-class" role="alert">
-    @@if (icon) {
-      <div class="alert-icon">
+   @@if (context.icon) {
+	<div class="alert-icon">
         @@icon
-      </div>
-    }
+	</div>}
     <div class="alert-content">
       <div class="alert-title">@@title</div>
       <ul class="list-disc mt-3 space-y-2 ps-4">

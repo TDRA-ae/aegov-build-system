@@ -7,11 +7,18 @@ const cleanCSS = require("gulp-clean-css"); // Minifies CSS
 const sourcemaps = require("gulp-sourcemaps"); // Generates source maps
 const browserSync = require("browser-sync").create();
 const replace = require("gulp-replace"); // Add this at the top
+const prettify = require("gulp-html-prettify"); // For HTML formatting
 // ✅ Process HTML (Development → dist/)
 function htmlDev() {
   return src("src/pages/**/*.html")
     .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "variant": "" } }))
      .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"')) // Remove extra spaces
+    .pipe(prettify({
+      indent_char: ' ',
+      indent_size: 2,
+      wrap_line_length: 80,
+      preserve_newlines: true
+    }))
     .on("error", console.log)
     .pipe(dest("dist"))
     .pipe(browserSync.stream());
@@ -22,6 +29,12 @@ function htmlBuild() {
   return src("src/pages/**/*.html")
     .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "variant": "" } }))
      .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"')) // Remove extra spaces
+    .pipe(prettify({
+      indent_char: ' ',
+      indent_size: 2,
+      wrap_line_length: 80,
+      preserve_newlines: true
+    }))
     .on("error", console.log)
     .pipe(dest("build"));
 }

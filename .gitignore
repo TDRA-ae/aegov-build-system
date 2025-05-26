@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 
 /dist
+/build
 
 *.code-workspace
 package-lock.json
