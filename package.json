@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "gulp dev",
+    "dev": "gulp dev",
     "dev:watch": "gulp dev:watch",
     "build": "gulp build",
     "zip": "bash zip.sh"
