@@ -1,0 +1,11 @@
+<div class="aegov-form-control @@if(context.size){@@size}  control-error">
+  <label for="@@inputId">@@labelText</label>
+  <div class="form-control-input">
+    <input type="@@type" id="@@inputId" name="@@inputName" aria-invalid="true" class="border-red-500" 
+      @@if(!('showPlaceholder' in context) || context.showPlaceholder){placeholder="@@placeholder" }
+      @@if(context.additionalAttributes){@@additionalAttributes}
+      @@if(context.disabled){disabled aria-disabled="true"} 
+      @@if(context.required){required aria-required="true"}>
+  </div>
+  <p class="error-message">@@errorMessage</p>
+</div>

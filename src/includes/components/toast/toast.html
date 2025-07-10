@@ -1,0 +1,21 @@
+<div id="@@toastId" class="w-full max-w-xs aegov-toast relative z-10 @@additional-class" role="alert">
+    <div class="flex items-start">
+        @@if(context.iconSVG){
+        <div class="toast-icon text-primary-600">
+            @@iconSVG
+        </div>
+        }
+        <div class="toast-body">
+            @@if(context.title){<span class="mb-1 text-base font-semibold text-aeblack-900"> @@title</span>}
+            <div class="mb-2 font-normal">@@message</div>
+            @@if (ctaLinkHref) {
+                <a href="@@ctaLinkHref" class="aegov-btn btn-xs">@@ctaLinkText</a>
+            }
+        </div>
+        <button type="button" class="toast-dismiss" data-dismiss-target="#@@toastId"
+            aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+        </button>
+    </div>
+</div>

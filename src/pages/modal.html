@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modal</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Modal component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Modal standard</h3>
+              @@include('./components/modal/modal.html', {
+                  "modalId": "my-unique-modal-1",
+                  "buttonText": "Click to Open Modal One",
+                  "modalBody": "This is the content for the standard modal."
+              })         
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Modal language</h3>
+              @@include('./components/modal/modal-language.html', {
+                "modalId": "language-modal-1",
+                "buttonText": "Select Language",
+                "primaryLang1Link": "/en",
+                "primaryLang1Text": "English",
+                "primaryLang2Link": "/ar",
+                "primaryLang2Text": "عربي",
+                "otherLang": [
+                    { "link": "/fr", "name": "French" },
+                    { "link": "/es", "name": "Spanish" },
+                    { "link": "/de", "name": "German" }
+                ]
+            })  
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Gold Star Rating modal</h3>
+              @@include('./components/modal/modal-gold-star-rating.html', {
+                "modalId": "modal-gold-star",
+                "starImageSrc": "https://designsystem.gov.ae/img/global-star.png",
+                "starImageAlt": "Gold Star Rating",
+                "modalStarImageSrc": "https://designsystem.gov.ae/img/global-star.png",
+                "modalStarImageAlt": "Gold Star Rating",
+                "awardInformation": "The Federal Authority for Identity, Citizenship, Customs & Port Security was awarded a <a href='#' class='text-aegold-600 font-bold no-underline'>4 star rating</a> by the Global Star Rating System for Services on 14/04/2022",
+                "learnMoreLink": "#",
+                "learnMoreText": "Learn more",
+                "verificationLink": "http://portal.gsr.ae/verify",
+                "verificationText": "http://portal.gsr.ae/verify"
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Customer Pulse modal</h3>
+            @@include('./components/modal/modal-customer-pulse.html', {
+              "modalId": "modal-customer-pulse",
+              "imageSrc": "https://designsystem.gov.ae/img/customer-pulse-ss.png",
+              "imageAlt": "customer pulse"
+          })
+          </li>
+
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">single action modal</h3>
+            @@include('./components/modal/modal-single-action.html', {
+              "modalId": "modal-payment-success",
+              "buttonText": "Show Success Modal",
+              "iconSVG": '<svg class="h-8 w-8 text-aegreen-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"> <rect width="256" height="256" fill="none" /> <polyline points="40 144 96 200 224 72" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" /> </svg>',
+              "modalTitle": "Payment successful",
+              "modalDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore.",
+              "buttonLabel": "Continue",
+              "buttonAction": "console.log('Continue button clicked')"
+          })
+          </li>
+          
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Single action, without an icon</h3>
+            @@include('./components/modal/modal-single-action.html', {
+              "modalId": "modal-payment-success2",
+              "buttonText": "Show Success Modal",
+              "modalTitle": "Payment successful",
+              "modalDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore.",
+              "buttonLabel": "Continue",
+              "buttonAction": "console.log('Continue button clicked')"
+          })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Multiple actions</h3>
+            @@include('./components/modal/modal-multiple-actions.html', {
+              "modalId": "modal-payment-options",
+              "buttonText": "Action Buttons",
+              "modalTitle": "Payment successful",
+              "modalDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore.",
+              "primaryButtonLabel": "Button",
+              "primaryButtonAction": "console.log('Proceeding to payment')",
+              "secondaryButtonLabel": "Button",
+              "secondaryButtonAction": "console.log('Cancelled')"
+          })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Simple alert</h3>
+              @@include('./components/modal/modal-simple-alert.html', {
+                "modalId": "modal-deactivate",
+                "buttonText": "Simple alert",
+                "iconSVG":'<svg class="h-8 w-8 text-primary-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"> <rect width="256" height="256" fill="none" /> <path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z" /> </svg>',
+                "modalTitle": "Deactivate account",
+                "modalMessage": "Are you sure you want to deactivate your account? All of your data will be permanently removed from our servers forever. This action cannot be undone.",
+                "confirmButtonLabel": "Confirm",
+                "confirmButtonAction": "console.log('Account deactivated')",
+                "cancelButtonLabel": "Cancel",
+                "cancelButtonAction": "console.log('Deactivation cancelled')"
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Simple alert with Bottom-Right placement</h3>
+            @@include('./components/modal/modal-bottom-right.html', {
+              "modalId": "modal-cookies",
+              "buttonText": "Show Cookie Alert",
+              "iconSVG": '<svg class="h-8 w-8 text-primary-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" /><path d="M208,40H48A16,16,0,0,0,32,56v58.77c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm-34.34,69.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32Z" /></svg>',
+              "modalTitle": "Website Cookies",
+              "modalMessage": "<p>Are you sure you want to deactivate your account? Our site enables scripts (e.g. cookies) that are able to read, store, and write information on your browser and device. The information processed by this script includes data relating to you, which may include personal identifiers.</p><p class='mb-0'>We use this information for various purposes - e.g. to deliver content, maintain security, enable user choice, improve our sites, and for marketing purposes. You may choose to accept or deny using our website accordingly. Learn more by visiting our Privacy Policy.</p>",
+              "primaryButtonLabel": "Allow all and accept",
+              "primaryButtonAction": "console.log('Cookies accepted')",
+              "secondaryButtonLabel": "Deny and quit",
+              "secondaryButtonAction": "console.log('Cookies denied')"
+          })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Scrollable content</h3>
+            @@include('./components/modal/modal-scrollable-content.html', {
+              "modalId": "modal-terms",
+              "buttonText": "Show Terms",
+              "iconSVG":'<svg class="h-8 w-8 text-primary-700 fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M213.66,66.34l-40-40A8,8,0,0,0,168,24H88A16,16,0,0,0,72,40V56H56A16,16,0,0,0,40,72V216a16,16,0,0,0,16,16H168a16,16,0,0,0,16-16V200h16a16,16,0,0,0,16-16V72A8,8,0,0,0,213.66,66.34ZM168,216H56V72h76.69L168,107.31v84.53c0,.06,0,.11,0,.16s0,.1,0,.16V216Zm32-32H184V104a8,8,0,0,0-2.34-5.66l-40-40A8,8,0,0,0,136,56H88V40h76.69L200,75.31Zm-56-32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h48A8,8,0,0,1,144,152Zm0,32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h48A8,8,0,0,1,144,184Z"></path></svg>',
+              "modalTitle": "Our terms and conditions have been updated",
+              "scrollableContent": "<p>There has been an update to our terms and conditions, and in order to proceed, you must be aware of the following changes:</p>",
+              "understoodButtonLabel": "I have understood these updates",
+              "understoodButtonAction": "console.log('Terms understood')"
+          })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Confirmation standard modal</h3>
+            @@include('./components/modal/modal-confirmation-standard.html', {
+              "modalId": "modal-submit-app",
+              "buttonText": "Show Confirmation",
+              "iconSVG": '<svg class="h-8 w-8 text-aegreen-600 fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>',
+              "modalTitle": "Are you sure you want to submit this application?",
+              "modalMessage": "You are about to submit the application to process a medical fitness examination at the Nadd Al Sheeba Medical Centre, Dubai. Are you sure you want to proceed?",
+              "checkboxId": "modal-standard-checkbox",
+              "checkboxLabel": "Don't show me this message again",
+              "checkboxAction": "console.log('Checkbox toggled')",
+              "confirmButtonLabel": "Confirm",
+              "confirmButtonAction": "console.log('Application submitted')",
+              "cancelButtonLabel": "Cancel",
+              "cancelButtonAction": "console.log('Submission cancelled')"
+          })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Confirmation serious modal</h3>
+            @@include('./components/modal/modal-confirmation-serious.html', {
+              "modalId": "modal-deactivate-account",
+              "buttonText": "Show Deactivate Modal",
+              "iconSVG": '<svg class="h-8 w-8 text-aered-600 fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M188,48a27.75,27.75,0,0,0-12,2.71V44a28,28,0,0,0-54.65-8.6A28,28,0,0,0,80,60v64l-3.82-6.13a28,28,0,0,0-48.6,27.82c16,33.77,28.93,57.72,43.72,72.69C86.24,233.54,103.2,240,128,240a88.1,88.1,0,0,0,88-88V76A28,28,0,0,0,188,48Zm12,104a72.08,72.08,0,0,1-72,72c-20.38,0-33.51-4.88-45.33-16.85C69.44,193.74,57.26,171,41.9,138.58a6.36,6.36,0,0,0-.3-.58,12,12,0,0,1,20.79-12,1.76,1.76,0,0,0,.14.23l18.67,30A8,8,0,0,0,96,152V60a12,12,0,0,1,24,0v60a8,8,0,0,0,16,0V44a12,12,0,0,1,24,0v76a8,8,0,0,0,16,0V76a12,12,0,0,1,24,0Z"></path></svg>',
+              "modalTitle": "Deactivate account",
+              "modalMessage": "Are you sure you want to deactivate your account? All of your data will be permanently removed from our servers forever. This action cannot be undone.",
+              "checkboxId": "modal-serious-checkbox",
+              "checkboxLabel": "Don’t show me this message again",
+              "checkboxAction": "console.log('Serious checkbox toggled')",
+              "confirmButtonLabel": "Deactivate my account",
+              "confirmButtonAction": "console.log('Account deactivated permanently')",
+              "cancelButtonLabel": "Cancel",
+              "cancelButtonAction": "console.log('Deactivation cancelled')",
+          })
+          </li>
+      </ul>
+    </div>
+    <!-- iconSVG is optional if you dont want icon -->
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

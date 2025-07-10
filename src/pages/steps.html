@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Steps</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Steps component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Steps standarrd</h3>
+            @@include('./components/steps/steps.html', {
+              "steps": [
+                { "status": "completed", "number": 1, "href": "#" },
+                { "status": "completed", "number": 2, "href": "#" },
+                { "status": "current", "number": 3, "href": "#" },
+                { "status": "upcoming", "number": 4, "href": "#" }
+              ]
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Text below</h3>
+            @@include('./components/steps/steps-text-below.html', {
+              "steps": [
+                { "status": "completed", "number": 1, "href": "#", "text": "Step 1" },
+                { "status": "current", "number": 2, "href": "#", "text": "Step 2" },
+                { "status": "upcoming", "number": 3, "href": "#", "text": "Step 3" }
+              ]
+            })
+        </li>
+        <li>
+          <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">vertical steps</h3>
+          @@include('./components/steps/steps-vertical.html', {
+        
+            "steps": [
+              { "status": "completed", "number": 1, "href": "#" },
+              { "status": "completed", "number": 2, "href": "#" },
+              { "status": "current", "number": 3, "href": "#" },
+              { "status": "upcoming", "number": 4, "href": "#" }
+            ]
+          })
+      </li>
+      <li>
+        <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Steps size</h3>
+        @@include('./components/steps/steps.html', {
+          "size":"step-sm",
+          "additional-class":"mb-8",
+          "steps": [
+            { "status": "completed", "number": 1, "href": "#" },
+            { "status": "completed", "number": 2, "href": "#" },
+            { "status": "current", "number": 3, "href": "#" },
+            { "status": "upcoming", "number": 4, "href": "#" }
+          ]
+        })
+        @@include('./components/steps/steps.html', {
+          "size":"step-base",
+          "additional-class":"mb-8",
+          "steps": [
+            { "status": "completed", "number": 1, "href": "#" },
+            { "status": "completed", "number": 2, "href": "#" },
+            { "status": "current", "number": 3, "href": "#" },
+            { "status": "upcoming", "number": 4, "href": "#" }
+          ]
+        })
+        @@include('./components/steps/steps.html', {
+          "size":"step-lg",
+          "additional-class":"mb-8",
+          "steps": [
+            { "status": "completed", "number": 1, "href": "#" },
+            { "status": "completed", "number": 2, "href": "#" },
+            { "status": "current", "number": 3, "href": "#" },
+            { "status": "upcoming", "number": 4, "href": "#" }
+          ]
+        })
+      </li>
+      </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

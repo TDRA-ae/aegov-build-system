@@ -1,0 +1,14 @@
+<div class="aegov-alert @@variant @@additional-class" role="alert">
+   @@if (context.icon) {
+	<div class="alert-icon">
+        @@icon
+	</div>}
+    <div class="alert-content">
+      <div class="alert-title">@@title</div>
+      <ul class="list-disc mt-3 space-y-2 ps-4">
+        @@for (var i = 0; i < errorList.length; i++) {
+          <li>`+errorList[i]+`</li>
+        }
+      </ul>
+    </div>
+  </div>

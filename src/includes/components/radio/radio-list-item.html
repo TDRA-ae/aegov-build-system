@@ -1,0 +1,13 @@
+<div class="aegov-check-group group-list @@if(context.size){@@size} @@if(context.secondary){check-secondary} @@additional-class">
+  <label for="@@id" id="@@id-description">@@labelText</label>
+  <input
+    id="@@id"
+    name="@@name"
+    value="@@value"
+    type="radio"
+    aria-describedby="@@id-description"
+    @@if(context.additionalAttributes){@@additionalAttributes}
+    @@if (context.checked ) { checked }
+    @@if (context.disabled ) { disabled }
+  >
+</div>

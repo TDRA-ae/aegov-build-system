@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hyperlink</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Hyperlink component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Hyperlink Default</h3>
+            @@include('components/hyperlink//hyperlink-default.html', {
+              "href": "#",
+              "linkText": "Basic inline link",
+              "rel": "",
+              "target": "_self",
+              "title": "Go somewhere"
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Hyperlink soft</h3>
+            @@include('components/hyperlink//hyperlink-hover-soft.html', {
+              "href": "#",
+              "linkText": "Basic inline link",
+              "title": "Go somewhere",
+              "icon": '<svg class="link-icon rtl:-scale-x-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" /><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" /><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" /></svg>'
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Hyperlink soft 2</h3>
+            @@include('components/hyperlink//hyperlink-hover-soft.html', {
+              "href": "#",
+              "linkText": "Basic inline link",
+              "title": "Go somewhere",
+              "icon": '<svg xmlns="http://www.w3.org/2000/svg" class="link-icon rtl:-scale-x-100" aria-hidden="true" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Hyperlink button soft</h3>
+            @@include('components/hyperlink//hyperlink-button-soft.html', {
+              "href": "#",
+              "linkText": "Basic inline link",
+              "rel": "",
+              "target": "_self",
+              "title": "Go somewhere"
+            })            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Hyperlink button outline</h3>
+            @@include('components/hyperlink//hyperlink-button-outline.html', {
+              "href": "#",
+              "linkText": "Basic inline link",
+              "rel": "",
+              "target": "_self",
+              "title": "Go somewhere"
+            })            
+          </li>
+        </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

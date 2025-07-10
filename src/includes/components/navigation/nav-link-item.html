@@ -1,0 +1,11 @@
+<li class="menu-item lg:inline-flex lg:items-center 
+    @@if(context.hasIcon){has-link-icon}
+    @@if(context.active){active-page}
+    @@if(!context.hasIcon){group} group">
+    <a href="@@href" class="lg:hover:!text-primary-800 lg:hover:!border-primary-800">
+        @@if (context.hasIcon) {
+        @@iconSVG
+        }
+        <span>@@label</span>
+    </a>
+</li>

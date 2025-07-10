@@ -1,0 +1,36 @@
+<button data-modal-target="@@modalId" data-modal-toggle="@@modalId" class="aegov-btn" type="button">
+    @@buttonText
+</button>
+
+<div id="@@modalId" tabindex="-1" aria-hidden="true" class="aegov-modal modal-serious hidden z-50" role="dialog">
+    <div class="relative w-full md:max-w-3xl  max-h-full">
+        <div class="aegov-modal-wrapper p-4 md:p-5 xl:p-6">
+            <div>
+                <div class="sm:flex sm:items-start">
+                    <div
+                        class="bg-aered-100 mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0">
+                        @@iconSVG
+                    </div>
+                    <div class="mt-4 text-center sm:ms-8 sm:mt-0 sm:text-left">
+                        <h3 class="text-lg font-bold text-aeblack-950" id="modal-title">@@modalTitle
+                        </h3>
+                        <div class="mt-4">
+                            <p class="text-base font-normal text-aeblack-800 mb-0">@@modalMessage</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-7 xl:mt-8 sm:flex items-center">
+                    <div class="aegov-check-item sm:pl-20 mb-4 sm:mb-0 justify-center sm:justify-start">
+                        <input id="@@checkboxId" type="checkbox" value="0" onclick="@@checkboxAction">
+                        <label for="@@checkboxId" class="text-aeblack-400">@@checkboxLabel</label>
+                    </div>
+                    <div class="sm:flex sm:flex-row-reverse sm:gap-3 sm:ml-auto">
+                        <button type="button" class="aegov-btn w-full sm:w-auto text-aered-600" onclick="@@confirmButtonAction">@@confirmButtonLabel</button>
+                        <button data-modal-hide="@@modalId" type="button"
+                            class="aegov-btn btn-link mt-3 sm:mt-0 w-full sm:w-auto" onclick="@@cancelButtonAction">@@cancelButtonLabel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

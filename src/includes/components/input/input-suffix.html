@@ -1,0 +1,17 @@
+<div class="aegov-form-control @@if(context.size){@@size}  @@if(context.secondary){control-secondary}">
+    <label for="@@inputId">@@labelText</label>
+    <div class="form-control-input">
+      <input
+        type="@@type"
+        id="@@inputId"
+        name="@@inputName"
+        @@if(!('showPlaceholder' in context) || context.showPlaceholder){placeholder="@@placeholder" }
+        @@if(context.additionalAttributes){@@additionalAttributes}
+        @@if(context.disabled){disabled aria-disabled="true"} 
+        @@if(context.required){required aria-required="true"}>
+        <span class="control-suffix">
+          @@suffix
+        </span>
+    </div>
+  </div>
+  

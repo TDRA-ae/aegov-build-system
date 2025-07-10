@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Alert</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Alert components</h2>
+        <ul class="space-y-6 ">
+            <li>
+                @@include('components/alert/alert.html', {
+                    "variant": "alert-info",
+                    "message": "<strong>Success!</strong> Your action was completed successfully."
+                })
+            </li>
+       
+         <li>
+            @@include('components/alert/alert-icon.html', {
+                "variant": "alert-error",
+                "message": "<strong>Success!</strong> Your action was completed successfully.",
+                "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M120,120a8,8,0,0,1,8,8v40a8,8,0,0,0,8,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="124" cy="84" r="12"/></svg>'
+            })
+         </li>
+          <li>
+            @@include('components/alert/alert-icon-link.html', {
+                "variant": "alert-success",
+                "message": "<strong>Success!</strong> Your action was completed successfully.",
+                "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M120,120a8,8,0,0,1,8,8v40a8,8,0,0,0,8,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="124" cy="84" r="12"/></svg>',
+                "linkText": "Link text",
+                "linkUrl": "https://www.google.com"
+            })
+          </li>
+          <li>
+            @@include('components/alert/alert-list.html', {
+                    "variant": "alert-error",
+                    "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M120,120a8,8,0,0,1,8,8v40a8,8,0,0,0,8,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="124" cy="84" r="12"/></svg>',
+                    "title": "There were 3 errors that were encountered regarding your registration",
+                    "message": "Please correct the following issues:",
+                    "errorList": [
+                        "Your password must be at least 8 characters",
+                        "Your password must include at least 1 numeric value",
+                        "Your last name is blank. Kindly add your last name to proceed with the registration."
+                    ]
+            })
+          </li>
+          <li>
+            @@include('components/alert/alert-additional-content.html', {
+                "variant": "alert-error",
+                "icon": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" aria-hidden="true"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M120,120a8,8,0,0,1,8,8v40a8,8,0,0,0,8,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="124" cy="84" r="12"/></svg>', 
+               "title": "Oh snap! there seems to be a road block",
+                "description": [
+                  "So this is embarrassing, but looks that we have come across an unexpected situation causing a system error. We have logged this event and will be looking into fixing this.",
+                  "We have logged this event and will be looking into fixing this."
+                ],
+                "linkUrl1": "#report-error",
+                "linkText1": "Report this error",
+                "linkUrl2": "#capture-screenshot",
+                "linkText2": "Capture a screenshot"
+              })
+          </li>
+          <li>
+            @@include('components/alert/alert-dismissing.html', {
+                "alertId":"alert-dismiss",
+                "variant": "alert-success",
+                "message": 'This is a warning that can be closed. Please take necessary action <a href="" onclick="return false">Action Link</a> if required.'
+            })
+          </li>
+          
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

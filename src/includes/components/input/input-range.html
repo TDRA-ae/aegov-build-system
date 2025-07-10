@@ -1,0 +1,22 @@
+<div class="aegov-form-control @@if(context.size){@@size} @@if(context.secondary){control-secondary}">
+    <label for="@@inputId">@@labelText</label>
+    <div class="form-control-input items-center">
+      <input
+        type="range"
+        id="@@inputId"
+        name="@@inputName"
+        min="@@min"
+        max="@@max"
+        value="@@value"
+        oninput="document.getElementById('@@outputId').innerHTML = this.value"
+        @@if(context.disabled){disabled aria-disabled="true"}
+        @@if(context.required){required aria-required="true"}
+        @@if(context.additionalAttributes){@@additionalAttributes}
+      >
+      <output
+        id="@@outputId"
+        class="w-[50px] text-sm text-end h-auto bg-transparent py-1"
+      >@@value</output>
+    </div>
+  </div>
+  

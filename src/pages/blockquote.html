@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blockquote</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Blockquote component</h2>
+        <ul class="space-y-6">
+          <li>
+              @@include('components/blockquote/blockquote.html', {
+                "quote": "The confidence of our wise leadership serves as motivation for more sincere and sustained action directed to serve our cherished homeland, which reflects a renewed incentive to continue with progress and advancement under the wise leadership of His Highness Sheikh Mohamed bin Zayed Al Nahyan, UAE President, and His Highness Sheikh Mohammed bin Rashid Al Maktoum, Vice President and Prime Minister of the UAE and Ruler of Dubai and their Highnesses, Members of the Supreme Council and Rulers of the Emirates.",
+                "author": "AbdulRahman",
+                "cite":"Minister of Health & Prevention",
+                "UrlCite":"https://mohap.gov.ae/en/about-us/minister-message"
+              })
+          </li>
+          <li>
+            @@include('components/blockquote/blockquote-colored.html', {
+              "quote": "The confidence of our wise leadership serves as motivation for more sincere and sustained action directed to serve our cherished homeland, which reflects a renewed incentive to continue with progress and advancement under the wise leadership of His Highness Sheikh Mohamed bin Zayed Al Nahyan, UAE President, and His Highness Sheikh Mohammed bin Rashid Al Maktoum, Vice President and Prime Minister of the UAE and Ruler of Dubai and their Highnesses, Members of the Supreme Council and Rulers of the Emirates.",
+              "author": "AbdulRahman",
+              "cite":"Minister of Health & Prevention",
+              "UrlCite":"https://www.example.com"
+            })
+        </li>
+        </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

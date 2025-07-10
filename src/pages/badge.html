@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Badge</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://designsystem.gov.ae/build/assets/site-Bz_IRYeA.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Badge component</h2>
+        <ul class="space-y-6 xl:w-8/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Badge Standard</h3>
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Default",
+              "additionalAttributes":"aria-label='default'"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Info",
+              "variant": "badge-info"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Error",
+              "variant": "badge-error"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Success",
+              "variant": "badge-success"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Warning",
+              "variant": "badge-warning"
+            })
+            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Badge sizes</h3>
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge default (base)",
+              "size": "base"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge large (lg)",
+              "size": "lg"
+            })
+            
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Badge solid</h3>
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Default",
+              "variant": "badge-solid"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Info",
+              "variant": "badge-solid badge-info"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Error",
+              "variant": "badge-solid badge-error"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Success",
+              "variant": "badge-solid badge-success"
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Badge Warning",
+              "variant": "badge-solid badge-warning"
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Badge with icon</h3>
+            @@include('./components/badge/badge.html', {
+              "badgeText": "Default",
+              "iconSVG": '<svg class="badge-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/></svg>'
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "info",
+              "variant": "badge-info",
+              "iconSVG": '<svg class="badge-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"/></svg>'
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "error",
+              "variant": "badge-error",
+              "iconSVG": '<svg class="badge-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-8,56a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm8,104a12,12,0,1,1,12-12A12,12,0,0,1,128,184Z"/></svg>'
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "success",
+              "variant": "badge-success",
+              "iconSVG": '<svg class="badge-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M32,104H80a0,0,0,0,1,0,0V208a0,0,0,0,1,0,0H32a8,8,0,0,1-8-8V112A8,8,0,0,1,32,104Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M80,104l40-80a32,32,0,0,1,32,32V80h64a16,16,0,0,1,15.87,18l-12,96A16,16,0,0,1,204,208H80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+            })
+            
+            @@include('./components/badge/badge.html', {
+              "badgeText": "warning",
+              "variant": "badge-warning",
+              "iconSVG": '<svg class="badge-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M142.41,40.22l87.46,151.87C236,202.79,228.08,216,215.46,216H40.54C27.92,216,20,202.79,26.13,192.09L113.59,40.22C119.89,29.26,136.11,29.26,142.41,40.22Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="128" y1="144" x2="128" y2="104" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="180" r="12"/></svg>'
+            })
+          </li>
+      </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

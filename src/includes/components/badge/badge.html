@@ -1,0 +1,7 @@
+<span
+  role="status"
+  @@if(context.additionalAttributes){@@additionalAttributes}
+  class="aegov-badge @@if(context.variant){@@variant} @@if(context.size){badge-@@size} @@additional-class"
+>
+  @@if (context.iconSVG) { @@iconSVG } @@badgeText
+</span>

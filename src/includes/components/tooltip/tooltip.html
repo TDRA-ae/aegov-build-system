@@ -1,0 +1,11 @@
+<button data-tooltip-target="@@tooltipId" type="button" class="aegov-btn @@buttonClass"
+  @@if('trigger' in context && trigger === 'hover'){ data-tooltip-trigger="hover" }
+  @@if('trigger' in context && trigger === 'click'){ data-tooltip-trigger="click" }
+  @@if('placement' in context){ data-tooltip-placement="@@placement" }
+>
+  @@buttonText
+</button>
+<div id="@@tooltipId" role="tooltip" class="z-10 aegov-tooltip @@animationClass">
+  @@tooltipContent
+  <div class="tooltip-arrow" data-popper-arrow></div>
+</div>

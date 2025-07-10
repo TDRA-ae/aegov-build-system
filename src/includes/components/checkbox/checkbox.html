@@ -1,0 +1,17 @@
+<div class="aegov-check-item @@if(context.size){@@size} @@if(context.secondary){check-secondary} @@additional-class">
+    <input
+      id="@@id"
+      name="@@name"
+      type="checkbox"
+      value="@@value"
+      @@if(context.additionalAttributes){@@additionalAttributes}
+      @@if (context.checked) { checked }
+      @@if (context.disabled) { disabled }
+    >
+    <label for="@@id">@@labelText</label>
+    @@if (context.description) {
+      <p id="@@id-description" class="text-sm">@@description</p>
+    }
+  </div>
+  
+  

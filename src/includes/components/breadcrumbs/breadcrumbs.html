@@ -1,0 +1,14 @@
+<nav aria-label="Breadcrumb" class="aegov-breadcrumb with-seperator @@additional-class">
+  <ol>
+    @@for (var i = 0; i < items.length; i++) {
+      <li>`+
+        (items[i].current
+          ? '<span aria-current="page">' + items[i].text + '</span>'
+          : '<a href="' + items[i].href + '"' +
+              (items[i].title ? ' title="' + items[i].title + '"' : '') +
+            '>' + items[i].text + '</a>'
+        )
+      +`</li>
+    }
+  </ol>
+</nav>

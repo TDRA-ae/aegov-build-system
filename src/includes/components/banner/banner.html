@@ -1,0 +1,18 @@
+<div class="aegov-banner @@if (context.bannerPosition) {@@bannerPosition} @@if (!context.bannerPosition) {banner-top}">
+    <div class="container">
+        <div
+            class="banner-content flex flex-wrap md:flex-nowrap items-center md:justify-center gap-3">
+           @@message
+            <a href="@@linkUrl"
+                class="banner-link aegov-link link-underline">
+                @@linkText
+                <svg class="w-5 h-5 rtl:-scale-x-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <polyline points="96 48 176 128 96 208" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>

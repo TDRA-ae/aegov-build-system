@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>radio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">radio component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li class="space-y-4">
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">standard radio with sizes and state</h3>
+            @@include('./components/radio/radio.html', {
+              "id": "radio-1",
+              "name": "group-a",
+              "value": "option1",
+              "labelText": "Option 1",
+              "checked": "true",
+              "size" :"check-lg"
+            })
+            @@include('./components/radio/radio.html', {
+              "id": "radio-2",
+              "name": "group-a",
+              "value": "option1",
+              "labelText": "Option 2",
+              "size" :"check-base"
+            })
+            @@include('./components/radio/radio.html', {
+              "id": "radio-3",
+              "name": "group-a",
+              "value": "option1",
+              "labelText": "Option 3",
+              "size" :"check-sm",
+            })     
+          </li>
+          <li class="space-y-4">
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">radio Use of secondary colour </h3>
+            @@include('./components/radio/radio-secondary-color.html', {
+              "id": "secondary-radio",
+              "name": "group-b",
+              "labelText": "Secondary radio",
+              "checked": "true"
+            }) 
+                                
+          </li>
+         
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">With additional description</h3>
+            <div class="space-y-4">
+              @@include('./components/radio/radio-description.html', {
+                "id": "plan01",
+                "name": "plan",
+                "labelText": "Starter plan",
+                "description": "The basic usage plan, starting at $9.99 per month",
+                "additionalAttributes":""
+              })
+              @@include('./components/radio/radio-description.html', {
+                "id": "plan02",
+                "name": "plan",
+                "labelText": "Starter plan",
+                "description": "The basic usage plan, starting at $9.99 per month"
+              })
+                
+            </div>
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">As a list element</h3>
+            <div class="divide-y divide-aeblack-100">
+              @@include('./components/radio/radio-list-item.html', {
+                "id": "card-1",
+                "name": "card",
+                "labelText": "Visa - XXXX XXXX XXXX 3456"
+              })
+              @@include('./components/radio/radio-list-item.html', {
+                "id": "card-2",
+                "name": "card",
+                "labelText": "Visa - XXXX XXXX XXXX 3456"
+              })
+            </div>
+            
+          </li>
+          </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

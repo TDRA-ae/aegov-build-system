@@ -1,0 +1,15 @@
+<div class="aegov-form-control @@if(context.secondary){control-secondary} @@additional-class">
+    <label>@@labelText</label>
+    <div class="form-control-dropbox px-6 py-10 @@if(context.disabled){opacity-50 cursor-not-allowed}">
+      @@if (icon) {
+        @@icon
+      }
+      <label for="@@inputId" class="cursor-pointer @@if(context.disabled){pointer-events-none}">
+        <span>@@buttonText</span>
+        <input id="@@inputId" name="@@inputName" type="file" class="sr-only" accept="@@accept" @@if(context.disabled){disabled} @@if(context.additionalAttributes){@@additionalAttributes}>
+      </label>
+      <span class="pl-1">or drag and drop</span>
+      <p class="text-xs leading-5 text-slate-600">@@note</p>
+    </div>
+  </div>
+  

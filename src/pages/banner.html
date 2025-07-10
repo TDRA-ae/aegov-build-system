@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Banner</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Banner component</h2>
+        <ul class="space-y-6">
+          <li>
+            @@include('components/banner/banner.html', {
+              "message": "Upgrading your account to be used with UAE Pass is now active.",
+              "bannerPosition": "banner-top",
+              "linkText":"Connect your account to UAE PASS",
+              "linkUrl": "#"
+            })
+        </li>
+          <li>
+              @@include('components/banner/banner-dark-camel.html', {
+                "message": "Upgrading your account to be used with UAE Pass is now active.",
+                "bannerPosition": "banner-top",
+                "linkText":"Connect your account to UAE PASS",
+                "linkUrl": "#"
+              })
+          </li>
+          <li>
+            @@include('components/banner/banner-red.html', {
+              "message": "Upgrading your account to be used with UAE Pass is now active.",
+              "bannerPosition": "banner-top",
+              "linkText":"Connect your account to UAE PASS",
+              "linkUrl": "#"
+            })
+        </li>
+        <li>
+          @@include('components/banner/banner-notice-secondary.html', {
+            "message": "We use cookies to personalise this website",
+            "bannerPosition": "banner-bottom",
+            "details": "Our site enables script (e.g. cookies) that is able to read, store, and write information on your browser and in your device. By using our website, you're agreeing to the collection of data as described in our Privacy Policy.",
+            "linkText1":"Accept",
+            "linkUrl1": "#",
+            "linkText2":"#",
+            "linkUrl2": "Deny"
+          })
+      </li>
+      <li>
+        @@include('components/banner/banner-notice-primary.html', {
+          "message": "We use cookies to personalise this website",
+          "bannerPosition": "banner-bottom",
+          "details": "Our site enables script (e.g. cookies) that is able to read, store, and write information on your browser and in your device. By using our website, you're agreeing to the collection of data as described in our Privacy Policy.",
+          "linkText1":"Accept",
+          "linkUrl1": "#",
+          "linkText2":"#",
+          "linkUrl2": "Deny"
+        })
+    </li>
+    <li>
+      @@include('components/banner/banner-dismissing.html', {
+        "message": "We are participating at World Government Summit 2023",
+        "bannerId":"banner-dismiss",
+        "linkUrl": "#",
+        "linkText":"Come join us"
+      })
+  </li>
+  </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>

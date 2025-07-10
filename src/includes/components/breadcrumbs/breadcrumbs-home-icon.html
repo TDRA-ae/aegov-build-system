@@ -1,0 +1,19 @@
+<nav aria-label="Breadcrumb" class="aegov-breadcrumb with-seperator @@additional-class">
+  <ol>
+    @@for (var i = 0; i < items.length; i++) {
+      <li>`+
+        (i === 0
+          ? '<a href="' + items[i].href + '">' +
+              '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="me-1 inline-block h-4 w-4 align-text-bottom"><rect width="256" height="256" fill="none"/><path d="M152,208V160a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V115.54a8,8,0,0,1,2.62-5.92l80-75.54a8,8,0,0,1,10.77,0l80,75.54a8,8,0,0,1,2.62,5.92V208a8,8,0,0,1-8,8H160A8,8,0,0,1,152,208Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>' +
+              items[i].text + '</a>'
+          : (items[i].current
+              ? '<span aria-current="page">' + items[i].text + '</span>'
+              : '<a href="' + items[i].href + '"' +
+                  (items[i].title ? ' title="' + items[i].title + '"' : '') +
+                '>' + items[i].text + '</a>'
+            )
+        )
+      +`</li>
+    }
+  </ol>
+</nav>

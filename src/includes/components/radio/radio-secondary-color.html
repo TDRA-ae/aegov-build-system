@@ -1,0 +1,12 @@
+<div class="aegov-check-item check-secondary @@if(context.size){@@size} @@additional-class">
+  <input
+    id="@@id"
+    type="radio"
+    name="@@name"
+    value="@@value"
+    @@if(context.additionalAttributes){@@additionalAttributes}
+    @@if (context.checked) { checked }
+    @@if (context.disabled) { disabled }
+  >
+  <label for="@@id">@@labelText</label>
+</div>

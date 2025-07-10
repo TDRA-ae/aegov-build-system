@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pagination</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="py-10">
+    <div class="container  xl:w-7/12">
+      <h2 class="mb-8">Pagination component</h2>
+        <ul class="space-y-6 xl:w-7/12">
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Pagination</h3>
+            @@include('./components/pagination/pagination.html', {
+              "currentPage": 3,
+              "totalPages": 10,
+              "baseUrl": "/page-",
+              "pageLinks": [1, 2, 3, 4, 5, "...", 10],
+              "previousUrl": "/page-2.html",
+              "nextUrl": "/page-4.html",
+              "firstUrl": "/page-1.html",
+              "lastUrl": "/page-10.html",
+              "showFirstLast": false // Set to true to show "First" and "Last" links, false to hide
+            })
+          </li>
+          <li>
+            <h3 class="text-h5 lg:text-h4 text-aeblack-500 leading-normal pt-4 mb-4 lg:mb-6">Pagination with First and Last Link</h3>
+            @@include('./components/pagination/pagination.html', {
+              "currentPage": 3,
+              "totalPages": 10,
+              "baseUrl": "/page-",
+              "pageLinks": [1, 2, 3, 4, 5, "...", 10],
+              "previousUrl": "/page-2.html",
+              "nextUrl": "/page-4.html",
+              "firstUrl": "/page-1.html",
+              "lastUrl": "/page-10.html",
+              "showFirstLast": true // Set to true to show "First" and "Last" links, false to hide
+            })
+        </li>
+      </ul>
+    </div>
+<script src="./js/script.js"></script>    
+<script src="./js/aegov-scripts.js"></script>  
+</body>
+</html>
