@@ -23,11 +23,6 @@ module.exports = {
           '20': '5rem',     // 20 × 0.25rem
         },
       },
-    },
-    plugins: [
-      require('@aegov/design-system'),
-      require('@tailwindcss/typography'),
-      require('@tailwindcss/forms')
-    ],
+    }
   }
   

@@ -30,6 +30,6 @@
     "tailwindcss": "^3.3.0"
   },
   "dependencies": {
-    "@aegov/design-system": "^2.2.9"
+    "@aegov/design-system": "^2.2.10"
   }
 }
