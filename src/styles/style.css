@@ -1,5 +1,43 @@
 /* create a new css file, example /src/style.css */
+/* New Tailwind v4 syntax */
+@layer base;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@plugin "@aegov/design-system";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  /* Min Width */
+  --min-w-10: 2.5rem;
+  --min-w-12: 3rem;
+  --min-w-16: 4rem;
+  --min-w-20: 5rem;
+
+  /* Min Height */
+  --min-h-10: 2.5rem;
+  --min-h-12: 3rem;
+  --min-h-16: 4rem;
+  --min-h-20: 5rem;
+}
+@layer utilities {
+  .min-w-10 {}
+}
+
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}

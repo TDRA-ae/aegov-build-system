@@ -1,95 +1,116 @@
-const { src, dest, watch, series, parallel } = require("gulp");
-const include = require("gulp-file-include"); // For HTML file includes
+const { src, dest, watch, series } = require("gulp");
+const include = require("gulp-file-include");
 const postcss = require("gulp-postcss");
-const tailwindcss = require("tailwindcss");
+const tailwindPostcss = require("@tailwindcss/postcss");
 const autoprefixer = require("autoprefixer");
-const cleanCSS = require("gulp-clean-css"); // Minifies CSS
-const sourcemaps = require("gulp-sourcemaps"); // Generates source maps
+const cleanCSS = require("gulp-clean-css");
+const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
-const replace = require("gulp-replace"); // Add this at the top
-const prettify = require("gulp-html-prettify"); // For HTML formatting
-// ✅ Process HTML (Development → dist/)
+const replace = require("gulp-replace");
+const prettify = require("gulp-html-prettify");
+
+/* ===============================
+   HTML TASKS
+================================ */
+
 function htmlDev() {
   return src("src/pages/**/*.html")
-    .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "variant": "" } }))
-     .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"')) // Remove extra spaces
-    .pipe(prettify({
-      indent_char: ' ',
-      indent_size: 2,
-      wrap_line_length: 80,
-      preserve_newlines: true
-    }))
-    .on("error", console.log)
+    .pipe(
+      include({
+        prefix: "@@",
+        basepath: "src/includes",
+        context: { "additional-class": "", variant: "" },
+      })
+    )
+    .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"'))
+    .pipe(
+      prettify({
+        indent_char: " ",
+        indent_size: 2,
+        wrap_line_length: 80,
+        preserve_newlines: true,
+      })
+    )
     .pipe(dest("dist"))
     .pipe(browserSync.stream());
 }
 
-// ✅ Process HTML (Production → build/)
 function htmlBuild() {
   return src("src/pages/**/*.html")
-    .pipe(include({ prefix: "@@", basepath: "src/includes",  context: { "additional-class": "", "variant": "" } }))
-     .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"')) // Remove extra spaces
-    .pipe(prettify({
-      indent_char: ' ',
-      indent_size: 2,
-      wrap_line_length: 80,
-      preserve_newlines: true
-    }))
-    .on("error", console.log)
+    .pipe(
+      include({
+        prefix: "@@",
+        basepath: "src/includes",
+        context: { "additional-class": "", variant: "" },
+      })
+    )
+    .pipe(replace(/\s+class="([^"]+)\s+"/g, ' class="$1"'))
+    .pipe(prettify({ indent_char: " ", indent_size: 2 }))
     .pipe(dest("build"));
 }
 
-// ✅ Process Tailwind CSS (Development → dist/, No Minification)
+/* ===============================
+   CSS TASKS (TAILWIND v4)
+================================ */
+
 function cssDev() {
   return src("src/styles/style.css")
     .pipe(sourcemaps.init())
-    .pipe(postcss([
-      require("tailwindcss")("./tailwind.config.js"),
-      autoprefixer
-    ]))
+    .pipe(
+      postcss([
+        tailwindPostcss(), // ✅ Tailwind v4 PostCSS plugin
+        autoprefixer,
+      ])
+    )
     .pipe(sourcemaps.write("."))
     .pipe(dest("dist/css"))
     .pipe(browserSync.stream());
 }
 
-// ✅ Process Tailwind CSS (Production → build/, Minified)
 function cssBuild() {
   return src("src/styles/style.css")
-    .pipe(postcss([
-      require("tailwindcss")("./tailwind.config.js"),
-      autoprefixer
-    ]))
-    .pipe(cleanCSS()) // Minify CSS
+    .pipe(
+      postcss([
+        tailwindPostcss(),
+        autoprefixer,
+      ])
+    )
+    .pipe(cleanCSS())
     .pipe(dest("build/css"));
 }
 
-// ✅ Process JavaScript (Development → dist/)
+/* ===============================
+   JS TASKS
+================================ */
+
 function jsDev() {
   return src("src/js/**/*.js")
     .pipe(dest("dist/js"))
     .pipe(browserSync.stream());
 }
 
-// ✅ Process JavaScript (Production → build/)
 function jsBuild() {
-  return src("src/js/**/*.js")
-    .pipe(dest("build/js"));
+  return src("src/js/**/*.js").pipe(dest("build/js"));
 }
 
-// ✅ Process images (Development → dist/)
+/* ===============================
+   IMAGE TASKS
+================================ */
+
 function imagesDev() {
   return src("src/images/**/*")
     .pipe(dest("dist/images"))
     .pipe(browserSync.stream());
 }
 
-// ✅ Process JavaScript (Production → build/)
 function imagesBuild() {
-  return src("src/images/**/*")
-    .pipe(dest("build/images"));
-} 
+  return src("src/images/**/*").pipe(dest("build/images"));
+}
 
-// ✅ Serve & Watch Files for Changes (Development)
+/* ===============================
+   DEV SERVER
+================================ */
+
 function serve() {
   browserSync.init({
     server: { baseDir: "dist" },
@@ -97,16 +118,20 @@ function serve() {
   });
 
   watch("src/pages/**/*.html", htmlDev);
-  watch(["src/styles/*.css", "src/**/*.html", "tailwind.config.js"], cssDev);
+  watch(["src/styles/**/*.css", "src/**/*.html"], cssDev); // ✅ removed tailwind.config.js
   watch("src/js/**/*.js", jsDev);
   watch("src/images/**/*", imagesDev);
 }
 
-// ✅ Gulp Commands
+/* ===============================
+   EXPORTS
+================================ */
+
 exports.html = htmlDev;
 exports.css = cssDev;
 exports.js = jsDev;
 exports.images = imagesDev;
+
 exports.dev = series(htmlDev, cssDev, jsDev, imagesDev);
 exports["dev:watch"] = series(htmlDev, cssDev, jsDev, imagesDev, serve);
 exports.build = series(htmlBuild, cssBuild, jsBuild, imagesBuild);
